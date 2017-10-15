@@ -1,0 +1,180 @@
+[2017-10-05 00:14:24] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 00:14:24] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 00:14:24] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 00:14:24] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 00:14:24] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 00:14:24] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 00:14:24] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 00:14:24] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 00:14:24] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 00:14:25] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 00:14:25] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 00:14:25] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 00:14:25] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 00:14:25] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 00:15:45] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 00:48:53] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 00:49:55] A Error Code: 0, Message:Uncaught Error: Call to undefined method app\model\User::setId() in /data/web/restful/vendor/yoc/db/builder/QueryRecord.php:134
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(111): yoc\db\builder\QueryRecord->builder(Object(app\model\User))
+#1 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(38): yoc\db\builder\QueryRecord->findByPrimary('1')
+#2 /data/web/restful/vendor/yoc/db/ActiveRecord.php(96): yoc\db\builder\QueryRecord->one()
+#3 /data/web/restful/vendor/yoc/base/Controller.php(43): yoc\db\ActiveRecord::findOne('1')
+#4 /data/web/restful/app/components/ActiveController.php(35): yoc\base\Controller->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/app/controller/UserController.php(25): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#7 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('before, In Line :134, At File:/data/web/restful/vendor/yoc/db/builder/QueryRecord.php
+[2017-10-05 00:50:00] A Error Code: 0, Message:Uncaught Error: Call to undefined method app\model\User::setId() in /data/web/restful/vendor/yoc/db/builder/QueryRecord.php:134
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(111): yoc\db\builder\QueryRecord->builder(Object(app\model\User))
+#1 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(38): yoc\db\builder\QueryRecord->findByPrimary('1')
+#2 /data/web/restful/vendor/yoc/db/ActiveRecord.php(96): yoc\db\builder\QueryRecord->one()
+#3 /data/web/restful/vendor/yoc/base/Controller.php(43): yoc\db\ActiveRecord::findOne('1')
+#4 /data/web/restful/app/components/ActiveController.php(35): yoc\base\Controller->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/app/controller/UserController.php(25): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#7 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('before, In Line :134, At File:/data/web/restful/vendor/yoc/db/builder/QueryRecord.php
+[2017-10-05 00:50:05] A Error Code: 0, Message:Uncaught Error: Call to undefined method app\model\User::setId() in /data/web/restful/vendor/yoc/db/builder/QueryRecord.php:134
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(111): yoc\db\builder\QueryRecord->builder(Object(app\model\User))
+#1 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(38): yoc\db\builder\QueryRecord->findByPrimary('1')
+#2 /data/web/restful/vendor/yoc/db/ActiveRecord.php(96): yoc\db\builder\QueryRecord->one()
+#3 /data/web/restful/app/logic/UserLogic.php(25): yoc\db\ActiveRecord::findOne('1')
+#4 [internal function]: app\logic\UserLogic->close(3)
+#5 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionMethod->invokeArgs(Object(app\logic\UserLogic), Array)
+#6 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 0, 4, Array)
+#7 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#8 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#9 /data/web/restful/service.php(1, In Line :134, At File:/data/web/restful/vendor/yoc/db/builder/QueryRecord.php
+[2017-10-05 01:19:29] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 01:19:29] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 01:19:29] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 01:19:29] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 01:19:29] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 01:19:29] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 01:19:29] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 01:19:29] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 01:19:29] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 01:19:31] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 01:19:31] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 01:19:31] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 01:19:31] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 01:19:31] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 01:20:10] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 01:27:04] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to Qiniu\Storage\BucketManager::__construct() must be an instance of Qiniu\Auth, string given, called in /data/web/restful/app/controller/SiteController.php on line 118 and defined in /data/web/restful/vendor/qiniu/php-sdk/src/Qiniu/Storage/BucketManager.php:20
+Stack trace:
+#0 /data/web/restful/app/controller/SiteController.php(118): Qiniu\Storage\BucketManager->__construct('-UvQk2r_TzdS9sG...')
+#1 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\SiteController->actionToken(Object(yoc\http\Request))
+#2 {main}
+  thrown, In Line :20, At File:/data/web/restful/vendor/qiniu/php-sdk/src/Qiniu/Storage/BucketManager.php
+[2017-10-05 01:44:24] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 02:34:17] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 02:52:24] A Error Code: 0, Message:Uncaught Error: Call to undefined method Yoc::getUser() in /data/web/restful/app/model/Message.php:72
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(139): app\model\Message->getSendInfoAttribute()
+#1 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(111): yoc\db\builder\QueryRecord->builder(Object(app\model\Message))
+#2 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(213): yoc\db\builder\QueryRecord->findByPrimary('195')
+#3 /data/web/restful/app/controller/MessageController.php(157): yoc\db\builder\QueryRecord->all()
+#4 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionList(Object(yoc\http\Request))
+#5 {main}
+  thrown, In Line :72, At File:/data/web/restful/app/model/Message.php
+[2017-10-05 02:52:40] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 15:18:23] A Error Code: 0, Message:Uncaught Error: Call to a member function getAttributes() on boolean in /data/web/restful/vendor/yoc/db/builder/QueryRecord.php:152
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(133): yoc\db\builder\QueryRecord->reset(false)
+#1 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(122): yoc\db\builder\QueryRecord->builder(false)
+#2 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(213): yoc\db\builder\QueryRecord->findByPrimary('9')
+#3 /data/web/restful/app/controller/GroupUserController.php(160): yoc\db\builder\QueryRecord->all()
+#4 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\GroupUserController->actionList(Object(yoc\http\Request))
+#5 {main}
+  thrown, In Line :152, At File:/data/web/restful/vendor/yoc/db/builder/QueryRecord.php
+[2017-10-05 15:18:33] A Error Code: 0, Message:Uncaught Error: Call to a member function getAttributes() on boolean in /data/web/restful/vendor/yoc/db/builder/QueryRecord.php:152
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(133): yoc\db\builder\QueryRecord->reset(false)
+#1 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(122): yoc\db\builder\QueryRecord->builder(false)
+#2 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(213): yoc\db\builder\QueryRecord->findByPrimary('9')
+#3 /data/web/restful/app/controller/GroupUserController.php(160): yoc\db\builder\QueryRecord->all()
+#4 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\GroupUserController->actionList(Object(yoc\http\Request))
+#5 {main}
+  thrown, In Line :152, At File:/data/web/restful/vendor/yoc/db/builder/QueryRecord.php
+[2017-10-05 15:19:40] A Error Code: 0, Message:Uncaught Error: Call to a member function getAttributes() on boolean in /data/web/restful/vendor/yoc/db/builder/QueryRecord.php:152
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(133): yoc\db\builder\QueryRecord->reset(false)
+#1 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(122): yoc\db\builder\QueryRecord->builder(false)
+#2 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(213): yoc\db\builder\QueryRecord->findByPrimary('9')
+#3 /data/web/restful/app/controller/GroupUserController.php(160): yoc\db\builder\QueryRecord->all()
+#4 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\GroupUserController->actionList(Object(yoc\http\Request))
+#5 {main}
+  thrown, In Line :152, At File:/data/web/restful/vendor/yoc/db/builder/QueryRecord.php
+[2017-10-05 15:20:04] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 15:20:08] A Error Code: 0, Message:Uncaught Error: Call to a member function getAttributes() on boolean in /data/web/restful/vendor/yoc/db/builder/QueryRecord.php:152
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(133): yoc\db\builder\QueryRecord->reset(false)
+#1 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(122): yoc\db\builder\QueryRecord->builder(false)
+#2 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(213): yoc\db\builder\QueryRecord->findByPrimary('9')
+#3 /data/web/restful/app/controller/GroupUserController.php(160): yoc\db\builder\QueryRecord->all()
+#4 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\GroupUserController->actionList(Object(yoc\http\Request))
+#5 {main}
+  thrown, In Line :152, At File:/data/web/restful/vendor/yoc/db/builder/QueryRecord.php
+[2017-10-05 15:39:10] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to app\logic\GroupLogic::message() must be an instance of app\model\GroupMessage, instance of app\model\User given in /data/web/restful/app/logic/GroupLogic.php:108
+Stack trace:
+#0 [internal function]: app\logic\GroupLogic->message(Object(app\model\User), Object(app\model\GroupMessage))
+#1 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionMethod->invokeArgs(Object(app\logic\GroupLogic), Array)
+#2 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 6, 6, Array)
+#3 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#4 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#5 /data/web/restful/service.php(108): yoc\base\Application->start()
+#6 /data/web/restful/service.php(112): server_start(Array)
+#7 {main}
+  thrown, In Line :108, At File:/data/web/restful/app/logic/GroupLogic.php
+[2017-10-05 15:39:12] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to app\logic\GroupLogic::message() must be an instance of app\model\GroupMessage, instance of app\model\User given in /data/web/restful/app/logic/GroupLogic.php:108
+Stack trace:
+#0 [internal function]: app\logic\GroupLogic->message(Object(app\model\User), Object(app\model\GroupMessage))
+#1 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionMethod->invokeArgs(Object(app\logic\GroupLogic), Array)
+#2 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 9, 6, Array)
+#3 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#4 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#5 /data/web/restful/service.php(108): yoc\base\Application->start()
+#6 /data/web/restful/service.php(112): server_start(Array)
+#7 {main}
+  thrown, In Line :108, At File:/data/web/restful/app/logic/GroupLogic.php
+[2017-10-05 15:39:12] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to app\logic\GroupLogic::message() must be an instance of app\model\GroupMessage, instance of app\model\User given in /data/web/restful/app/logic/GroupLogic.php:108
+Stack trace:
+#0 [internal function]: app\logic\GroupLogic->message(Object(app\model\User), Object(app\model\GroupMessage))
+#1 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionMethod->invokeArgs(Object(app\logic\GroupLogic), Array)
+#2 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 12, 6, Array)
+#3 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#4 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#5 /data/web/restful/service.php(108): yoc\base\Application->start()
+#6 /data/web/restful/service.php(112): server_start(Array)
+#7 {main}
+  thrown, In Line :108, At File:/data/web/restful/app/logic/GroupLogic.php
+[2017-10-05 15:39:17] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to app\logic\GroupLogic::message() must be an instance of app\model\GroupMessage, instance of app\model\User given in /data/web/restful/app/logic/GroupLogic.php:108
+Stack trace:
+#0 [internal function]: app\logic\GroupLogic->message(Object(app\model\User), Object(app\model\GroupMessage))
+#1 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionMethod->invokeArgs(Object(app\logic\GroupLogic), Array)
+#2 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 18, 6, Array)
+#3 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#4 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#5 /data/web/restful/service.php(108): yoc\base\Application->start()
+#6 /data/web/restful/service.php(112): server_start(Array)
+#7 {main}
+  thrown, In Line :108, At File:/data/web/restful/app/logic/GroupLogic.php
+[2017-10-05 15:39:52] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 15:39:55] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to app\logic\GroupLogic::message() must be an instance of app\model\GroupMessage, instance of app\model\User given in /data/web/restful/app/logic/GroupLogic.php:108
+Stack trace:
+#0 [internal function]: app\logic\GroupLogic->message(Object(app\model\User), Object(app\model\GroupMessage))
+#1 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionMethod->invokeArgs(Object(app\logic\GroupLogic), Array)
+#2 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 1, 6, Array)
+#3 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#4 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#5 /data/web/restful/service.php(108): yoc\base\Application->start()
+#6 /data/web/restful/service.php(112): server_start(Array)
+#7 {main}
+  thrown, In Line :108, At File:/data/web/restful/app/logic/GroupLogic.php
+[2017-10-05 16:00:12] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 16:00:16] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 16:23:18] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 16:41:26] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 16:48:04] A Error Code: 0, Message:, In Line :, At File:
+[2017-10-05 16:51:08] A Error Code: 0, Message:, In Line :, At File:

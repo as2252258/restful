@@ -1,0 +1,159 @@
+.tech_right {
+
+    border-left: none;
+    background-color: inherit;
+
+}
+
+.help_detail_list .help_title {
+    height: 60px;
+    width: 230px;
+    background-color: #fff;
+}
+
+.help_detail_list.active i {
+    background: #3987c7;
+}
+
+.help_detail_list.active span {
+    color: #333333;
+}
+
+.help_detail_list {
+    height: auto;
+    width: 230px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.help_detail_list .help_collapse.in {
+    display: block;
+    background: #fafafa;
+}
+
+.help_detail_list .accordion-inner {
+    padding: 5px 0;
+}
+
+.help_detail_list .accordion-inner > li {
+    list-style-type: none;
+    padding: 0 10px 0 40px;
+}
+
+.container li {
+    list-style-type: none;
+}
+
+.help_detail_list .help_collapse a {
+    color: #3987c7;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+.help_detail_list .help_collapse a:hover {
+    color: #666;
+}
+
+.help_detail_list .accordion-inner > li:hover {
+    background: #fff;
+}
+
+.container li {
+    list-style-type: none;
+}
+
+.help_detail_list .accordion-inner {
+    padding: 5px 0;
+}
+
+.accordion-inner {
+    padding: 9px 15px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.help_detail_list .help_title span {
+    display: inline-block;
+    line-height: 60px;
+    font-size: 13px;
+    font-family: "Microsoft YaHei", 微软雅黑;
+    color: #414141;
+    margin-left: 35px;
+    cursor: pointer;
+}
+
+.help_detail_list .help_title i {
+    display: inline-block;
+    height: 60px;
+    width: 5px;
+    background: #fff;
+    float: left;
+}
+
+.help_detail_list.active i {
+    background: #3987c7;
+}
+
+.sub_help {
+    width: 230px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    border-bottom: none;
+    float: left;
+}
+
+body {
+    background: #F4F4F4;
+}
+
+.help_detail_list .accordion-inner > li.active {
+    background: #DFDFDF;
+}
+
+.help_detail_list .help_collapse {
+    background: #F4F4F4;
+    display: none;
+}
+
+.help_detail {
+    float: left;
+    width: 726px;
+    margin-left: 20px;
+    min-height: 300px;
+    padding-top: 20px;
+}
+
+.help_detail .search-div, .help_detail .input-append {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.help_detail > div {
+    padding: 20px;
+    background: #fff;
+}
+
+.help_detail .search-div input {
+    background: url(http://static_fhl.baidu.com/static/images/icon/search_bg.jpg) no-repeat 5px 8px;
+    padding-left: 30px;
+    height: 30px;
+    line-height: 30px;
+    width: 80%;
+}
+
+li {
+    list-style-type: none;
+}
+
+h5 {
+    font-size: 18px;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 40px;
+}
+
+.sub_title {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

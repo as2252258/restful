@@ -1,0 +1,17 @@
+{
+	"autoload": {
+		"psr-4": {
+			"yoc\\": "vendor/yoc",
+			"app\\": "app"
+		},
+		"files": [
+			"vendor/yoc/funcs.php"
+		]
+	},
+	"require-dev": {
+		"eaglewu/swoole-ide-helper": "dev-master"
+	},
+	"require": {
+		"qiniu/php-sdk": "^7.2"
+	}
+}

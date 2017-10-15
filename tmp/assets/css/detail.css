@@ -1,0 +1,95 @@
+
+.u-catli {
+    padding: 7px 10px 7px 15px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.u-catli h3 {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 7px 0;
+    width: 545px;
+}
+
+.u-catli time {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    color: #999;
+    font-size: 14px;
+}
+
+.u-catlist-tags {
+    position: relative;
+}
+
+.u-catli h3 a {
+    color: #136ec2;
+    padding: 2px 5px 2px 2px;
+}
+
+.article-tags {
+    color: #A3A3A3;
+    font-size: 12px;
+    padding: 0 0 6px 2px;
+}
+
+.t {
+    background: none repeat scroll 0 0 #e5e5e5;
+    color: #999;
+    padding: 1px 3px;
+    position: relative;
+}
+
+.article-tags a:link {
+    color: #999;
+}
+
+.article-tags a {
+    margin: 0 6px;
+    padding: 1px 2px;
+}
+
+.u-catli:hover {
+    background-color: #EAE7E7;
+}
+
+.u-catname {
+    line-height: 37px;
+    height: 40px;
+    /*background: #d7e7f7;*/
+    background-color: #fcfcfc;
+    padding: 0 10px 0 15px;
+
+}
+
+.u-catname h2 {
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    /*color: #1e3e74;*/
+    color: black;
+}
+
+.u-catname .f-fr {
+    font-size: 14px;
+}
+
+.f-fr {
+    float: right;
+}
+
+.help_detail_item {
+    border: 1px solid #ddd;
+    border-top: 3px solid #1a5f97;
+    padding: 0;
+}
+
+.help_detail > div .help_detail_item {
+    padding: 0;
+}
+
+.u-catname {
+    height: 32px;
+}

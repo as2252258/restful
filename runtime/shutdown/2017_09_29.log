@@ -1,0 +1,318 @@
+[2017-09-29 00:03:42] A Error Code: 0, Message:Uncaught Error: Cannot use object of type Swoole\Http\Request as array in /data/web/restful/vendor/yoc/core/WebSocket.php:53
+Stack trace:
+#0 {main}
+  thrown, In Line :53, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 01:20:30] A Error Code: 0, Message:Uncaught ArgumentCountError: Too few arguments to function app\controller\PurviewController::app\controller\{closure}(), 0 passed and exactly 1 expected in /data/web/restful/app/controller/PurviewController.php:52
+Stack trace:
+#0 [internal function]: app\controller\PurviewController->app\controller\{closure}()
+#1 /data/web/restful/vendor/yoc/base/Objects.php(66): call_user_func(Object(Closure))
+#2 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#3 /data/web/restful/app/controller/PurviewController.php(70): yoc\db\ActiveRecord->save()
+#4 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\PurviewController->actionUpdate(Object(yoc\http\Request))
+#5 {main}
+  thrown, In Line :52, At File:/data/web/restful/app/controller/PurviewController.php
+[2017-09-29 01:21:24] A Error Code: 0, Message:Uncaught ArgumentCountError: Too few arguments to function app\controller\PurviewController::app\controller\{closure}(), 0 passed and exactly 1 expected in /data/web/restful/app/controller/PurviewController.php:52
+Stack trace:
+#0 [internal function]: app\controller\PurviewController->app\controller\{closure}()
+#1 /data/web/restful/vendor/yoc/base/Objects.php(66): call_user_func(Object(Closure))
+#2 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#3 /data/web/restful/app/controller/PurviewController.php(69): yoc\db\ActiveRecord->save()
+#4 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\PurviewController->actionUpdate(Object(yoc\http\Request))
+#5 {main}
+  thrown, In Line :52, At File:/data/web/restful/app/controller/PurviewController.php
+[2017-09-29 08:04:07] A Error Code: 0, Message:Cannot declare class Controller\PhpMyAdminController, because the name is already in use, In Line :193, At File:/data/web/restful/app/controller/PhpMyAdminController.php
+[2017-09-29 08:05:15] A Error Code: 0, Message:, In Line :, At File:
+[2017-09-29 14:47:48] A Error Code: 0, Message:, In Line :, At File:
+[2017-09-29 15:06:38] A Error Code: 0, Message:, In Line :, At File:
+[2017-09-29 15:10:53] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:113
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionClass->getMethod('connect')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 0, 0, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :113, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:10:53] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:113
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionClass->getMethod('connect')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 0, 1, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :113, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:11:08] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:114
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(114): ReflectionClass->getMethod('connect')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 0, 0, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :114, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:11:08] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:114
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(114): ReflectionClass->getMethod('connect')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 0, 1, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :114, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:11:44] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:113
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionClass->getMethod('connect')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 0, 0, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :113, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:11:44] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:113
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionClass->getMethod('connect')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 0, 1, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :113, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:12:20] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:113
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionClass->getMethod('connect')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 0, 1, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :113, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:12:20] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:113
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionClass->getMethod('connect')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 0, 0, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :113, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:20:12] A Error Code: 0, Message:, In Line :, At File:
+[2017-09-29 15:21:13] A Error Code: 0, Message:, In Line :, At File:
+[2017-09-29 15:21:21] A Error Code: 0, Message:, In Line :, At File:
+[2017-09-29 15:21:34] A Error Code: 0, Message:, In Line :, At File:
+[2017-09-29 15:28:25] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:113
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionClass->getMethod('connect')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 0, 0, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :113, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:28:26] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:113
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionClass->getMethod('connect')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 0, 1, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :113, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:28:28] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:113
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionClass->getMethod('close')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 1, 0, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :113, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:28:28] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:113
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionClass->getMethod('close')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 2, 0, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :113, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:28:28] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:113
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionClass->getMethod('connect')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 3, 0, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :113, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:28:28] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:113
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionClass->getMethod('close')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 0, 2, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :113, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:28:28] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:113
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionClass->getMethod('close')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 0, 3, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :113, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:28:28] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:113
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionClass->getMethod('close')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 1, 2, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :113, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:28:28] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:113
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(113): ReflectionClass->getMethod('close')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 2, 2, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :113, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:29:32] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:111
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(111): ReflectionClass->getMethod('connect')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 0, 0, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :111, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:29:32] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:111
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(111): ReflectionClass->getMethod('connect')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 0, 1, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :111, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:29:38] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:111
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(111): ReflectionClass->getMethod('close')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 1, 1, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :111, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:29:38] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:111
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(111): ReflectionClass->getMethod('close')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 2, 1, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :111, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:29:39] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:111
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(111): ReflectionClass->getMethod('connect')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 3, 1, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :111, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:29:39] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:111
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(111): ReflectionClass->getMethod('close')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 0, 2, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :111, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:29:39] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:111
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(111): ReflectionClass->getMethod('close')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 0, 3, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :111, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:29:39] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:111
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(111): ReflectionClass->getMethod('close')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 1, 2, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :111, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 15:29:39] A Error Code: 0, Message:Uncaught Error: Internal error: Failed to retrieve the reflection object in /data/web/restful/vendor/yoc/core/WebSocket.php:111
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/WebSocket.php(111): ReflectionClass->getMethod('close')
+#1 [internal function]: yoc\core\WebSocket::onTask(Object(Swoole\WebSocket\Server), 2, 2, Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(62): Swoole\Http\Server->start()
+#3 /data/web/restful/vendor/yoc/base/Application.php(116): yoc\base\Server->start()
+#4 /data/web/restful/service.php(81): yoc\base\Application->start()
+#5 /data/web/restful/service.php(94): server_start(Array)
+#6 {main}
+  thrown, In Line :111, At File:/data/web/restful/vendor/yoc/core/WebSocket.php
+[2017-09-29 16:36:12] A Error Code: 0, Message:, In Line :, At File:
+[2017-09-29 16:58:34] A Error Code: 0, Message:, In Line :, At File:
+[2017-09-29 17:02:21] A Error Code: 0, Message:, In Line :, At File:
+[2017-09-29 17:32:31] A Error Code: 0, Message:Uncaught ArgumentCountError: Too few arguments to function yoc\base\Objects::getPool(), 0 passed in /data/web/restful/vendor/yoc/base/Components.php on line 20 and exactly 1 expected in /data/web/restful/vendor/yoc/base/Objects.php:111
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Components.php(20): yoc\base\Objects->getPool()
+#1 /data/web/restful/vendor/yoc/base/Gii.php(828): yoc\base\Components->__get('pool')
+#2 /data/web/restful/app/controller/SiteController.php(87): yoc\base\Gii::run(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\SiteController->actionGii(Object(yoc\http\Request))
+#4 {main}
+  thrown, In Line :111, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-29 17:33:05] A Error Code: 0, Message:Uncaught ArgumentCountError: Too few arguments to function yoc\base\Objects::getPool(), 0 passed in /data/web/restful/vendor/yoc/base/Components.php on line 20 and exactly 1 expected in /data/web/restful/vendor/yoc/base/Objects.php:111
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Components.php(20): yoc\base\Objects->getPool()
+#1 /data/web/restful/vendor/yoc/base/Gii.php(828): yoc\base\Components->__get('pool')
+#2 /data/web/restful/app/controller/SiteController.php(87): yoc\base\Gii::run(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\SiteController->actionGii(Object(yoc\http\Request))
+#4 {main}
+  thrown, In Line :111, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-29 17:33:23] A Error Code: 0, Message:, In Line :, At File:
+[2017-09-29 17:33:26] A Error Code: 0, Message:Uncaught ArgumentCountError: Too few arguments to function yoc\base\Objects::getPool(), 0 passed in /data/web/restful/vendor/yoc/base/Components.php on line 20 and exactly 1 expected in /data/web/restful/vendor/yoc/base/Objects.php:111
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Components.php(20): yoc\base\Objects->getPool()
+#1 /data/web/restful/vendor/yoc/base/Gii.php(828): yoc\base\Components->__get('pool')
+#2 /data/web/restful/app/controller/SiteController.php(87): yoc\base\Gii::run(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\SiteController->actionGii(Object(yoc\http\Request))
+#4 {main}
+  thrown, In Line :111, At File:/data/web/restful/vendor/yoc/base/Objects.php

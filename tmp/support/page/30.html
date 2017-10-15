@@ -1,0 +1,915 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tomcat SSL证书配置 - 便宜SSL</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" /> 
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/import.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/wiki.css" />
+<!--[if lt IE 7]>
+	<link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css" />
+<![endif]-->
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<script type="text/javascript" src="../../assets/js/jquery-2.0.3.js"></script>
+<script src="../../assets/js/layer/layer.js"></script>
+
+
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+<body id="product">
+<style type="text/css">
+.tech_right {
+
+ border-left: none; 
+ background-color: inherit; 
+
+}
+.help_detail_list .help_title {
+height: 60px;
+width: 230px;
+background-color:#fff;
+}
+.help_detail_list.active i {
+background: #3987c7;
+}
+.help_detail_list.active span {
+color: #333333;
+}
+.help_detail_list {
+height: auto;
+width: 230px;
+border-bottom: 1px solid #e5e5e5;
+}
+
+.help_detail_list .help_collapse.in {
+display: block;
+background: #fafafa;
+}
+
+.help_detail_list .accordion-inner {
+padding: 5px 0;
+}
+.help_detail_list .accordion-inner>li {
+  list-style-type: none;
+padding: 0 10px 0 40px;
+}
+.container li {
+list-style-type: none;
+}
+.help_detail_list .help_collapse a {
+color: #3987c7;
+line-height: 35px;
+cursor: pointer;
+}
+.help_detail_list .help_collapse a:hover {
+color: #666;
+}
+
+.help_detail_list .accordion-inner>li:hover {
+background: #fff;
+}
+.container li {
+list-style-type: none;
+}
+.help_detail_list .accordion-inner {
+padding: 5px 0;
+}
+.accordion-inner {
+padding: 9px 15px;
+border-top: 1px solid #e5e5e5;
+}
+.help_detail_list .help_title span {
+display: inline-block;
+line-height: 60px;
+font-size: 13px;
+font-family: "Microsoft YaHei",微软雅黑;
+color: #414141;
+margin-left: 35px;
+cursor: pointer;
+}
+.help_detail_list .help_title i {
+display: inline-block;
+height: 60px;
+width: 5px;
+background: #fff;
+float: left;
+}
+
+.help_detail_list.active i {
+background: #3987c7;
+}
+.sub_help{
+width: 230px;
+border: 1px solid #e5e5e5;
+background: #fff;
+border-bottom: none;
+float: left;
+}
+
+body {
+background: #F4F4F4;
+}
+.help_detail_list .accordion-inner>li.active {
+background: #DFDFDF;
+}
+.help_detail_list .help_collapse {
+background: #F4F4F4;
+display: none;
+}
+
+
+
+
+
+.help_detail {
+float: left;
+width: 726px;
+margin-left: 20px;
+min-height: 300px;
+padding-top: 20px;
+}
+
+
+.help_detail .search-div, .help_detail .input-append {
+margin-bottom: 10px;
+display: block;
+}
+.help_detail>div {
+padding: 20px;
+background: #fff;
+}
+
+.help_detail .search-div input {
+background: url(http://static_fhl.baidu.com/static/images/icon/search_bg.jpg) no-repeat 5px 8px;
+padding-left: 30px;
+height: 30px;
+line-height: 30px;
+width: 80%;
+}
+
+
+ li {
+list-style-type: none;
+}
+h5 {
+font-size: 18px;
+padding: 20px;
+text-align: center;
+border-bottom: 1px solid #e6e6e6;
+margin-bottom: 40px;
+}
+.sub_title{
+  display:block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;
+}
+
+</style>
+
+
+
+
+<div class="header_box">
+<div class="header">
+          
+<div class="logo"><a href="/" title="便宜SSL"><img src="https://dn-pianyi.qbox.me/assets/images/cheap_logo.png" alt="便宜SSL"></a></div>
+
+<ul class="nav">
+<li ><a title="便宜SSL网首页" href="/">网站首页</a></li>
+<li class="cur"><a href="../../support.html">支持中心</a></li>
+<li ><a href="/tools">在线工具</a></li>
+</ul>
+
+
+
+
+
+<ul class="login">
+
+
+<li><a href="reg.html">注册</a></li>
+<li><a href="#" id="btn_login">登陆</a></li>
+
+<span class="popup-arrow" style="display: none;"><i></i></span>
+
+<div class="popup-layer" style="display: none;">
+					<div class="popup" id="popup__">
+						<form class="popup-signin" name="LoginForm" action="/user/login" method="post">
+							<h4>用户名/邮箱：</h4>
+							<input class="ipt" type="text" name="LoginForm[name]" value="" size="20">
+							<h4>密码：</h4>
+							<input class="ipt" type="password" name="LoginForm[password]" value="" size="20">
+							
+							<div id="_code" style="display:none;"><h4>验证码：</h4>
+							<input class="ipt" type="text" name="LoginForm[code]" style="width:50px;" value="" maxlength="3">
+							<img style="float: left;width: 100px;margin-right:20px;" src="/user/code?385446" id="1img_code" onclick="$(this).attr('src','/user/code?'+Math.ceil(Math.random()*10));">
+							</div>
+							<input class="btn btn-primary" type="submit" name="submit" value="立即登录">
+							<p><a class="btn btn-mini" href="reg.html">注册</a><a class="btn btn-mini" href="#" onclick="layer.msg('出于安全性考虑，请联系客服！', 1,8);_czc.push(['_trackEvent','用户','登陆','找回密码','0','popup__']);">找回密码</a></p>
+		                    <input type="hidden" name="redirect_to" value="/">
+		                </form>
+	           		</div>
+           		</div>
+
+           </ul><style type="text/css">
+
+.popup-layer {
+display: none;
+position: absolute;
+/*left: auto;*/
+right: 110px;
+z-index: 99;
+top: 43px;
+}
+.popup {
+margin-top: 12px;
+background-color: #fff;
+border: solid 1px #ccc;
+}
+.popup h4 {
+font-size: 12px;
+margin-bottom: 2px;
+color: #444;
+line-height: 20px;
+}
+.popup-signin {
+margin: 16px;
+}
+.popup-signin .ipt {
+margin-bottom: 12px;
+width: 220px;
+}
+.ipt {
+border: solid 1px #d2d2d2;
+border-left-color: #ccc;
+border-top-color: #ccc;
+border-radius: 2px;
+box-shadow: inset 0 1px 0 #f8f8f8;
+background-color: #fff;
+padding: 4px 6px;
+height: 21px;
+line-height: 21px;
+color: #555;
+width: 180px;
+}
+.popup-signin .btn-primary {
+width: 234px;
+}
+.btn {
+position: relative;
+cursor: pointer;
+display: inline-block;
+vertical-align: middle;
+font-size: 12px;
+font-weight: bold;
+height: 27px;
+line-height: 27px;
+min-width: 52px;
+padding: 0 12px;
+text-align: center;
+text-decoration: none;
+border-radius: 2px;
+border: 1px solid #ddd;
+color: #666;
+background-color: #f5f5f5;
+background: -webkit-linear-gradient(top,#F5F5F5,#F1F1F1);
+background: -moz-linear-gradient(top,#F5F5F5,#F1F1F1);
+background: linear-gradient(top,#F5F5F5,#F1F1F1);
+}
+.btn-primary {
+border-color: #3079ED;
+color: #F3F7FC;
+background-color: #4D90FE;
+background: -webkit-linear-gradient(top,#4D90FE,#4787ED);
+background: -moz-linear-gradient(top,#4D90FE,#4787ED);
+background: linear-gradient(top,#4D90FE,#4787ED);
+}
+.btn-buy {
+border-color: #D67A68;
+color: #F3F7FC;
+background-color: #E91F0D;
+background: -webkit-linear-gradient(top,#F57816,#D36D29);
+background: -moz-linear-gradient(top,#F57816,#D36D29);
+background: linear-gradient(top,#F57816,#D36D29);
+}
+.btn-buy:hover {
+color: #fff;
+background: -webkit-linear-gradient(top,#F57816,#FF944C);
+background: -moz-linear-gradient(top,#F57816,#FF944C);
+background: linear-gradient(top,#F57816,#FF944C);
+
+}
+.btn-mini {
+height: 23px;
+line-height: 23px;
+padding: 0 8px;
+font-weight: normal;
+}
+.popup-signin p {
+border-top: solid 1px #CCCCCC;
+margin: 12px -16px 0;
+padding: 12px 16px 0;
+}/*
+.btn:hover {
+border-color: #c6c6c6;
+color: #333;
+background-color: #f8f8f8;
+background: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+background: -moz-linear-gradient(top,#f8f8f8,#f1f1f1);
+background: linear-gradient(top,#f8f8f8,#f1f1f1);
+box-shadow: #ddd 0 1px 1px 0;
+}*/
+.popup-signin p .btn {
+margin-right: 10px;
+}
+
+.btn-primary:hover {
+border-color: #2F5BB7;
+color: #fff;
+background-color: #4D90FE;
+background: -webkit-linear-gradient(top,#4D90FE,#357AE8);
+background: -moz-linear-gradient(top,#4D90FE,#357AE8);
+background: linear-gradient(top,#4D90FE,#357AE8);
+}
+
+	.header{
+		width: 930px;
+	}
+	.header .logo{
+		font-size: 30px;
+		margin-top: 10px;
+	}
+	.header .login{
+		font-size: 14px;
+		top: 0px;
+		position: relative;
+		float: right;
+width: 250px;
+margin-right: 80px;
+		/*right: 0px;*/
+		/*float: right;*/
+		height:41px;line-height: 41px;
+	}
+	.header .login li{
+	height:41px;
+	line-height: 41px;
+	    border-radius: 0px;
+	}
+.popup-arrow {
+display: none;
+bottom: -12px;
+left: 50%;
+margin-left: -7px;
+z-index: 100;
+border-bottom-color: #bbb;
+top: 10px;
+}
+.popup-arrow, .popup-arrow i {
+position: absolute;
+border-color: transparent;
+border-style: dashed solid solid;
+border-width: 0 7px 7px;
+width: 0;
+height: 0;
+display: inline-block;
+}
+
+.xubox_tipsMsg a{
+	color:#fff;
+}
+
+
+</style>
+<script type="text/javascript">
+
+
+
+$(document).ready(function () {
+
+
+
+function go_index(){
+  window.location.href="/"; 
+}
+
+             
+$("#logout").click(function(){
+  $.post("/user/logout?",{},function(result){
+      layer.msg(result.info, 2,1);
+       setInterval(go_index, 2000);  
+  });
+  return false;
+}); 
+$("form[name='LoginForm']").submit(function(e){
+  /*
+登陆网站
+  */
+var u=$("input[name='LoginForm[name]']").val();
+var p=$("input[name='LoginForm[password]']").val();
+var c=$("input[name='LoginForm[code]']").val();
+  if(u.length<3 || p.length<6){
+      layer.msg("请输入用户名和密码", 1,8); //fail
+       return false;
+  }
+   $.post("/user/login_ajax?"+RndNum(6),{u:u,p:p,c:c},function(result){
+    if(result.status==0){
+      if(result.info.indexOf("验证码") != -1 ){
+            $("#_code").show();
+        }
+      layer.msg(result.info, 2,8); //fail
+       $("#_code").show();
+       $("#img_code").click();
+      return false;
+    }
+    if(result.status==1){
+
+      layer.msg(result.info, 2,1); //suc
+       setInterval(go_index, 2000);  
+      return false;
+    }
+    });
+    return false;
+});
+
+
+
+$("#btn_service").click(function(){
+		// alert(1);
+		if($('#service').is(":hidden")){
+			$('#service').show(200);
+			$('#service').mouseleave(function(){
+				$(this).hide(200);
+			});
+		}else{
+			$('#service').hide(200);
+		}
+		return false;
+	});
+
+
+
+	$("#btn_login").click(function(){
+		_czc.push(["_trackEvent",'用户','登陆','登陆','0','btn_login']);
+		// alert(1);
+		if($('.popup-layer').is(":hidden")){
+			$('.popup-layer').show(200);
+
+		}else{
+			$('.popup-layer').hide(200);
+		}
+		return false;
+	});
+	$("#user_btn").click(function(){
+		// alert(1);
+		if($('#popup-usr-info').is(":hidden")){
+			$('#popup-usr-info').show(200);
+		}else{
+			$('#popup-usr-info').hide(200);
+		}
+		return false;
+	});
+
+
+
+});
+</script>
+
+
+
+    <!-- <div class="sch">
+    <form method="get" class="search-form" action="/support/search/">
+      <input class="search-input" name="s" type="text" placeholder="输入关键字搜索" autofocus="" x-webkit-speech=""><input class="btn btn-primary search-submit" type="submit" value="搜索">
+    </form>
+    </div> -->
+</div>
+</div>
+
+<div id="wrapper">
+
+  <div class="tech_leftNav">
+      
+<br>  
+<!-- <br> -->
+
+<div class="sub_help">
+ <div class="help_detail_list active">
+            <div class="help_title"> <i></i>
+                <span>SSL常见问题</span>
+            </div>
+            <div id="sub_1" class="help_collapse in" style="display: block;">
+                <div class="accordion-inner">
+                    
+                    <li class="list_1 ">
+                        <div>
+                           <a style="display:block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" class="sub_title" href="../lists/1.html" title="SSL证书百科">SSL证书百科</a>
+                        </div>
+                    </li>
+                    
+                    <li class="list_2 ">
+                        <div>
+                            <a style="display:block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" class="sub_title" href="../lists/2.html" title="CSR生成">CSR生成</a>
+                        </div>
+                    </li>
+                    
+                    <li class="list_3 active">
+                        <div>
+                            <a style="display:block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" class="sub_title" href="../lists/3.html" title="证书安装">证书安装</a>
+                        </div>
+                    </li>
+                    
+                    <li class="list_4 ">
+                        <div>
+                            <a style="display:block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" class="sub_title" href="../lists/4.html" title="证书备份">证书备份</a>
+                        </div>
+                    </li>
+                    
+                    <li class="list_5 ">
+                        <div>
+                            <a style="display:block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" class="sub_title" href="../lists/5.html" title="证书相关">证书相关</a>
+                        </div>
+                    </li>
+                    
+                   <!--  <li class="list_6">
+                        <div>
+                            <a style="display:block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" class="sub_title" href="/help/#help_title=西部数码修改NS" title="西部数码修改NS">西部数码修改NS</a>
+                        </div>
+                    </li> -->
+                    
+                </div>
+            </div>
+
+        </div>
+    
+    
+<div class="help_detail_list">
+            <div class="help_title"> <i></i>
+               <a href="../lists/5.html"> <span>网站常见问题</span></a>
+            </div>
+            <div id="sub_2" class="help_collapse" class="">
+                <div class="accordion-inner">
+                    
+                    <li class="list_1">
+                        <div>
+                            <a style="display:block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" class="sub_title" href="" title=""></a>
+                        </div>
+                    </li>
+                    
+                    <li class="list_2">
+                        <div>
+                            <a style="display:block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" class="sub_title" href="" title=""></a>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+      </div>
+
+  </div>
+
+
+
+
+
+<style type="text/css">
+
+.crumbs {
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  border-bottom: solid 1px #e6e6e6;
+  margin-bottom: 30px;
+}
+.crumbs a {
+  color: #136ec2;
+  margin-right: 5px;
+}
+.crumbs span {
+  margin-left: 5px;
+}
+.help_detail_item img{
+    margin:auto;
+    clear:both;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.help_detail_item p{
+    line-height: 26px;
+
+}
+.help_detail_item{
+    margin-bottom: 30px;
+}
+</style>
+
+
+   <div class="help_detail">
+ 
+
+<h3 class="crumbs" id="channel_crumb"><a href="../../support.html">技术支持中心</a>&gt;<a href="../lists/3.html">证书安装</a>&gt;<span>Tomcat SSL证书配置</span></h3>
+
+
+<!--    <div class="search-div">
+           
+
+
+            <div class=" input-append">
+                <input class="span2 search-bar" value="" id="appendedInputButtons" type="text" placeholder="输入查询关键字，暂时不支持多关键字">
+                <button class="btn" type="button" id="js_search" style="width:100px;height:35px;margin:0">搜索问题</button>
+            </div>
+            <span>热门搜索: </span>
+            <a href="/help/#search=NS">NS</a>
+            <a href="/help/#search=CNAME">CNAME</a>
+            <a href="/help/#search=云加速">云加速</a>
+        </div> -->
+
+        <div class="help_detail_item">
+            
+            <div class="sub_1">
+                
+
+                    
+            
+                    
+
+                    
+                <li style="" class="list_2">
+                    <div>
+                        <h5>Tomcat SSL证书配置</h5>
+
+
+                        
+                        参考本文前，请准备好.jks文件
+
+定位到tomcat的安装目录，找到conf下的server.xml文件<br>
+找到相应的代码：<br>
+
+参照下图，按照您服务器实际情况修改配置文件：<br>
+
+<img width="600" src="/resource/img/tomcat-3.png">
+<br>
+Ciphers建议填写：<br>
+<p>
+<textarea>
+
+ciphers="TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_256_CBC_SHA256"
+</textarea>
+
+</p>
+
+SSLProtocol建议填写：sslProtocol="TLSv1.2"
+主要：其中的keystore.jks为之前生成的keystore文件。如果之前也是参照我们的文档，那么默认密码是：123456  
+<br>
+若以上配置有问题，可以参考下以下这个:
+<br>
+<textarea>
+<Connector port="443" protocol="org.apache.coyote.http11.Http11Protocol"
+               maxThreads="150" SSLEnabled="true" scheme="https" secure="true"
+     keystoreFile="keystore/domain.jks"  keystorePass="证书密码"
+               clientAuth="false" sslProtocol="TLS"
+               ciphers="TLS_RSA_WITH_AES_128_GCM_SHA256,
+                        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,
+                        TLS_RSA_WITH_AES_128_CBC_SHA,
+                        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,
+                        TLS_RSA_WITH_AES_128_CBC_SHA256,
+                        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,
+                        SSL_RSA_WITH_3DES_EDE_CBC_SHA,
+                        TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA" />
+</textarea>
+<br>
+
+使用apr的tomcat（windows环境路径请使用“\”）
+
+<br>
+
+<textarea><Connector port="443" maxHttpHeaderSize="8192"
+               maxThreads="150"
+               enableLookups="false" disableUploadTimeout="true"
+               acceptCount="100" scheme="https" secure="true"
+               SSLEnabled="true"
+               SSLProtocol="TLSv1,TLSv1.1,TLSv1.2"
+               SSLCertificateFile="usr/home/tomcat/conf/localhost.crt"
+               SSLCertificateKeyFile="usr/home/tomcat/conf/localhost.key"
+               SSLCertificateChainFile="usr/home/tomcat/conf/1_root_bundle.crt"
+               SSLCipherSuite="HIGH:!RC4:!DH:!MD5:!aNULL:!eNULL"/>
+</textarea>
+
+<br>
+配置后记得重启web服务器，并且观察启动时候的错误日志。
+<br>ps.配置前请升级tomcat7 jdk1.8或者以上
+
+
+
+
+
+
+
+                    </div>
+                </li>
+                
+                    
+
+                
+                    
+            </div>
+            
+         
+            
+          
+        </div>
+
+
+
+
+
+
+
+</div><!-- tech_right -->
+
+      
+
+</div><!-- end wrapper -->
+
+<div class="footer_new">
+
+
+<p class="left"><center>
+			<a href="../../info/about.html">关于便宜SSL</a> |&nbsp;        <a href="../../info/customer.html">客户案例</a> |&nbsp;        <a href="../../info/job.html">诚征英才</a> |&nbsp;        <a href="../../info/contact.html">联系我们</a>
+		</center>
+		</p>
+
+
+<p class="left">Copyright ©&nbsp;2010&nbsp;-&nbsp;2014 PianyiSSL.com Corporation, All Rights Reserved
+
+<center>厦门所以然信息科技有限公司(Soinfo Tech Co.,LTD. &nbsp;&nbsp;&nbsp;D-U-N-S Number: 544408670）</center>
+
+<center><a href="http://www.miitbeian.gov.cn">闽ICP备15000761号-1</a></center>
+<br>
+</p>
+
+<div style="display:none">
+
+
+
+<!-- Start of 客服相关 supportbox script -->
+<!-- <script src="//assets.kf5.com/supportbox/main.js" id="kf5-provide-supportBox" kf5-domain="pianyissl.kf5.com"></script> -->
+<!-- End of 在线客服相关 supportbox script -->
+
+
+
+</div>
+
+
+</div>
+
+
+
+<link rel="styleSheet" type="text/css" href="https://assets.kf5.com/supportbox/css/btn.css">
+<style type="text/css">
+.kf5-support	.header h7 {
+	    color: #F1F1F1;
+    font-weight: bold;
+    font-size: 15px;
+
+
+}
+
+
+.kf5-support .header {
+    border-bottom: 1px solid #e9eaed;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 10px;
+    border-radius: 3px 3px 0 0;
+    background-color: #6097EF;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.kf5-support-box {
+    width: 320px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.full-screen {
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.kf5-support-box .main {
+    background: rgba(250,250,251,0.98);
+    position: relative;
+    padding:20px;
+}
+.full-screen .main {
+    position: absolute;
+    top: 42px;
+    bottom: 0px;
+    width: 100%;
+}
+#kf5-support-123456789 .kf5-support {
+    position: fixed;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    z-index: 99999;
+    right: 30px;
+    bottom: 20px;
+    height: 330px;
+    width: 320px;
+    display: none;
+    background: #fff;
+}
+
+
+
+
+
+.kf5-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 10px;
+    color: #999;
+    font-size: 20px;
+    line-height: 42px;
+}
+.kf5-close {
+    position: absolute;
+    z-index: 999;
+    right: 10px;
+    text-decoration: none;
+    top: 0;
+    color: #999;
+    font-size: 20px;
+    line-height: 42px;
+}
+.kf5-support a {
+	color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+</style>
+
+
+<div class="kf5-support-123456789 kf5-right kf5-style1" id="kf5-support-123456789"><div id="kw-tab" class="kf5-support-btn" style="background:#5997F5"> <img src="/assets/images/kf_icon.png" alt=""><span>在线咨询</span> </div> <div id="kw-block" class="kf5-support"> <a id="kw-close" class="kf5-close" title="关闭"><i class="kf5-icon-clear"></i></a> <div id="kw-loading" class="kf5-loading"> </div> <iframe id="kw-widget-iframe" src="" scrolling="no" frameborder="0"></iframe> </div></div>
+
+<script type="text/javascript">
+	$("#kf5-support-123456789").click(function(){
+		$(this).fadeOut();
+		$("#kf_contact_box").fadeIn();
+		// $("div[s='1']").show();
+	});
+</script>
+
+<div id="kf_contact_box" s="1" class="kf5-support" style="display: none;"> 
+
+
+
+<div id="kw-loading" class="kf5-loading" style="display: none;"> </div> <div id="kw-widget-iframe" style="position: fixed;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    z-index: 99999;
+    right: 30px;
+    bottom: 20px;
+    height: 160px;
+    width: 250px;
+    background: #fff;"><div id="main-wrapper" class="kf5-support-box full-screen"><!--留言提交-->
+<div class="header">
+    
+
+    <h7>在线支持</h7><a id="kw-close" class="kf5-close" title="关闭" onclick="$('#kf_contact_box').fadeOut();$('#kf5-support-123456789').fadeIn();">x</i></a> 
+
+</div>
+
+<div class="main" style="line-height: 25px;">
+
+							在线交谈：&nbsp;&nbsp;<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=395947308&amp;site=qq&amp;menu=yes" target="_blank"><img src="/assets/images/qq.gif"></a>
+                            <p>QQ号码：<strong>395947308</strong></p>
+							<p>客服热线：<strong>400-036-0906</strong></p>
+
+
+</div>
+
+</div></div> </div>
+
+
+
+
+</body>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,1776 @@
+
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: Unknown Class :  in /data/web/restful/vendor/yoc/di/Ioc.php:130
+Stack trace:
+#0 /data/web/restful/vendor/yoc/validate/Validate.php(96): yoc\di\Ioc::createObject(NULL)
+#1 /data/web/restful/vendor/yoc/db/ActiveRecord.php(396): yoc\validate\Validate::createValidate('timestamp', Array, NULL, Array)
+#2 /data/web/restful/vendor/yoc/db/ActiveRecord.php(374): yoc\db\ActiveRecord->addRule()
+#3 /data/web/restful/app/controller/PurviewController.php(71): yoc\db\ActiveRecord->save()
+#4 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\PurviewController->actionUpdate(Object(yoc\http\Request))
+#5 {main}
+Exception: Request Error: Not Find Controller File!data/web/restful/app/controller/VendorController.php in /data/web/restful/vendor/yoc/base/Server.php:156
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(97): yoc\base\Server->createController('VendorControlle...', Object(yoc\http\Request))
+#1 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/PurviewController.php(69): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\PurviewController->actionUpdate(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/PurviewController.php(69): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\PurviewController->actionUpdate(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/PurviewController.php(69): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\PurviewController->actionUpdate(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/PurviewController.php(70): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\PurviewController->actionUpdate(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/PurviewController.php(70): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\PurviewController->actionUpdate(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/PurviewController.php(70): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\PurviewController->actionUpdate(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/PurviewController.php(69): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\PurviewController->actionUpdate(Object(yoc\http\Request))
+#3 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Objects.php(64): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#5 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(124): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Objects.php(64): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#5 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(124): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Objects.php(64): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#5 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(124): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(124): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Objects.php(64): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#5 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(124): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Objects.php(64): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#5 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(124): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Objects.php(64): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#5 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(124): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Objects.php(64): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#5 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(124): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:128
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(114): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(72): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(44): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:128
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(114): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(72): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(44): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Objects.php(64): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#5 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:128
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(114): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(72): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(44): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:93
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(125): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(114): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(72): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(44): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:128
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(114): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:128
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(114): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Objects.php(64): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#5 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:128
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(114): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:93
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(125): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(114): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:128
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(114): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:128
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(114): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Objects.php(64): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#5 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:128
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(114): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:93
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(125): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(114): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Objects.php(64): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#5 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(124): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(113): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:126
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:126
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Objects.php(64): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#5 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:126
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:126
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:126
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:128
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(112): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:128
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(112): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:128
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(112): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:125
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:126
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(112): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:125
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:125
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:126
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(112): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 403 in /data/web/restful/app/components/ActiveController.php:127
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#1 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#2 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#6 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(64): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: Request Error: Not Find Controller File!data/web/restful/app/controller/VideoController.php in /data/web/restful/vendor/yoc/base/Server.php:155
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(97): yoc\base\Server->createController('VideoController', Object(yoc\http\Request))
+#1 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:70
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/ActiveRecord.php(380): yoc\base\Objects->trigger('afterSave')
+#1 /data/web/restful/app/controller/MessageController.php(50): yoc\db\ActiveRecord->save()
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\MessageController->actionAdd(Object(yoc\http\Request))
+#3 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: Request Error: Not Find Controller File!data/web/restful/app/controller/Web.testController.php in /data/web/restful/vendor/yoc/base/Server.php:155
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(97): yoc\base\Server->createController('Web.testControl...', Object(yoc\http\Request))
+#1 {main}
+Exception: Request Error: Not Find Controller File!data/web/restful/app/controller/Web.testController.php in /data/web/restful/vendor/yoc/base/Server.php:155
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(97): yoc\base\Server->createController('Web.testControl...', Object(yoc\http\Request))
+#1 {main}
+Exception: Request Error: Not Find Controller File!data/web/restful/app/controller/Web.testController.php in /data/web/restful/vendor/yoc/base/Server.php:155
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(97): yoc\base\Server->createController('Web.testControl...', Object(yoc\http\Request))
+#1 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: Request Error: Not Find Controller File!data/web/restful/app/controller/404Controller.php in /data/web/restful/vendor/yoc/base/Server.php:155
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(97): yoc\base\Server->createController('404Controller', Object(yoc\http\Request))
+#1 {main}
+Exception: Request Error: Not Find Controller File!data/web/restful/app/controller/404Controller.php in /data/web/restful/vendor/yoc/base/Server.php:155
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(97): yoc\base\Server->createController('404Controller', Object(yoc\http\Request))
+#1 {main}
+Exception: Request Error: Not Find Controller File!data/web/restful/app/controller/CacheController.php in /data/web/restful/vendor/yoc/base/Server.php:155
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(97): yoc\base\Server->createController('CacheController', Object(yoc\http\Request))
+#1 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: Request Error: Not Find Controller File!data/web/restful/app/controller/CacheController.php in /data/web/restful/vendor/yoc/base/Server.php:155
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(97): yoc\base\Server->createController('CacheController', Object(yoc\http\Request))
+#1 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: Request Error: Not Find Controller File!data/web/restful/app/controller/PhpMyAdminController.php in /data/web/restful/vendor/yoc/base/Server.php:155
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(97): yoc\base\Server->createController('PhpMyAdminContr...', Object(yoc\http\Request))
+#1 {main}
+Exception: Request Error: Not Find Controller File!data/web/restful/app/controller/PhpMyAdminController.php in /data/web/restful/vendor/yoc/base/Server.php:155
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(97): yoc\base\Server->createController('PhpMyAdminContr...', Object(yoc\http\Request))
+#1 {main}
+Exception: 404 Not Find Page : 'app\controller\PhpMyAdminController' in /data/web/restful/vendor/Yoc.php:38
+Stack trace:
+#0 [internal function]: Yoc::autoload('app\\controller\\...')
+#1 [internal function]: spl_autoload_call('app\\controller\\...')
+#2 /data/web/restful/vendor/yoc/base/Server.php(162): ReflectionClass->__construct('app\\controller\\...')
+#3 /data/web/restful/vendor/yoc/base/Server.php(97): yoc\base\Server->createController('PhpMyAdminContr...', Object(yoc\http\Request))
+#4 {main}
+Exception: 401 in /data/web/restful/app/components/ActiveController.php:45
+Stack trace:
+#0 /data/web/restful/app/controller/PhpMyAdminController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\PhpMyAdminController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#3 {main}
+Exception: 401 in /data/web/restful/app/components/ActiveController.php:45
+Stack trace:
+#0 /data/web/restful/app/controller/PhpMyAdminController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\PhpMyAdminController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#3 {main}
+Exception: 401 in /data/web/restful/app/components/ActiveController.php:45
+Stack trace:
+#0 /data/web/restful/app/controller/PhpMyAdminController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\PhpMyAdminController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#3 {main}
+Exception: Request Error: Not Find Controller File!data/web/restful/app/controller/InterfaceController.php in /data/web/restful/vendor/yoc/base/Server.php:155
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(97): yoc\base\Server->createController('InterfaceContro...', Object(yoc\http\Request))
+#1 {main}
+Exception: 401 in /data/web/restful/app/components/ActiveController.php:45
+Stack trace:
+#0 /data/web/restful/app/controller/PhpMyAdminController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\PhpMyAdminController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#3 {main}
+Exception: 401 in /data/web/restful/app/components/ActiveController.php:45
+Stack trace:
+#0 /data/web/restful/app/controller/PhpMyAdminController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\PhpMyAdminController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#3 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: Request Error: Not Find Controller File!data/web/restful/app/controller/VideoController.php in /data/web/restful/vendor/yoc/base/Server.php:155
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(97): yoc\base\Server->createController('VideoController', Object(yoc\http\Request))
+#1 {main}
+Exception: Get Unknown Method databases in /data/web/restful/vendor/yoc/base/AbServer.php:66
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Components.php(24): yoc\base\AbServer->__get('databases')
+#1 /data/web/restful/app/controller/PhpMyAdminController.php(42): yoc\base\Components->__get('databases')
+#2 /data/web/restful/vendor/yoc/base/Server.php(105): app\controller\PhpMyAdminController->actionGetTable(Object(yoc\http\Request))
+#3 {main}
+Exception: Request Error: Not Find Controller File!data/web/restful/app/controller/PhpmyadminController.php in /data/web/restful/vendor/yoc/base/Server.php:155
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(97): yoc\base\Server->createController('PhpmyadminContr...', Object(yoc\http\Request))
+#1 {main}
+Exception: Request Error: Not Find Controller File!data/web/restful/app/controller/PmaController.php in /data/web/restful/vendor/yoc/base/Server.php:155
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(97): yoc\base\Server->createController('PmaController', Object(yoc\http\Request))
+#1 {main}
+Exception: Request Error: Not Find Controller File!data/web/restful/app/controller/MyadminController.php in /data/web/restful/vendor/yoc/base/Server.php:155
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(97): yoc\base\Server->createController('MyadminControll...', Object(yoc\http\Request))
+#1 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: Page actionToken Not Find in /data/web/restful/vendor/yoc/base/Server.php:100
+Stack trace:
+#0 {main}
+Exception: Page actionToken Not Find in /data/web/restful/vendor/yoc/base/Server.php:100
+Stack trace:
+#0 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:92
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(122): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(111): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(71): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(43): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 404 not found in /data/web/restful/vendor/yoc/base/Server.php:79
+Stack trace:
+#0 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:93
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(123): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(112): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(72): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(44): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:93
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(123): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(112): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(72): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(44): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:93
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(123): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(112): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(72): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(44): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:93
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(123): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(112): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(72): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(44): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:93
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(123): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(112): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(72): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(44): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+Exception: 您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录 in /data/web/restful/app/components/ActiveController.php:93
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(123): app\components\ActiveController->checkUserStatus()
+#1 /data/web/restful/app/components/ActiveController.php(112): app\components\ActiveController->checkUserGroup(Object(app\model\Auth))
+#2 /data/web/restful/app/components/ActiveController.php(72): app\components\ActiveController->checkRouteAuth(Object(yoc\http\Request))
+#3 /data/web/restful/app/components/ActiveController.php(44): app\components\ActiveController->checkRequestAuth(Object(yoc\http\Request))
+#4 /data/web/restful/app/controller/UserController.php(23): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#5 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Server.php(104): yoc\base\Objects->trigger('beforeAction')
+#7 {main}
+[2017-09-29 16:09:21] A Error Code: 404, Message:Page actionToken Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:11:53] A Error Code: 404, Message:Page actionToken Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:15:07] A Error Code: 404, Message:Page actionToken Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:15:35] A Error Code: 404, Message:Page actionToken Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:15:37] A Error Code: 404, Message:Page actionToken Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:15:38] A Error Code: 404, Message:Page actionToken Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:15:38] A Error Code: 404, Message:Page actionToken Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:15:38] A Error Code: 404, Message:Page actionToken Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:15:38] A Error Code: 404, Message:Page actionToken Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:15:39] A Error Code: 404, Message:Page actionToken Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:16:05] A Error Code: 404, Message:Page actionToken Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:17:51] A Error Code: 404, Message:Page actionToken Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:18:09] A Error Code: 404, Message:Page actionToken Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:36:24] A Error Code: 0, Message:Request Error: Not Find Controller File!data/web/restful/app/controller/InterfaceController.php, In Line :155, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:37:47] A Error Code: 0, Message:Request Error: Not Find Controller File!data/web/restful/app/controller/VideoController.php, In Line :155, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:38:01] A Error Code: 0, Message:Request Error: Not Find Controller File!data/web/restful/app/controller/VideoController.php, In Line :155, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:38:02] A Error Code: 0, Message:Request Error: Not Find Controller File!data/web/restful/app/controller/VideoController.php, In Line :155, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:39:21] A Error Code: 404, Message:404 not found, In Line :79, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:39:22] A Error Code: 404, Message:404 not found, In Line :79, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:41:11] A Error Code: 0, Message:Request Error: Not Find Controller File!data/web/restful/app/controller/VideoController.php, In Line :155, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:52:09] A Error Code: 404, Message:Page actionLog Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:52:21] A Error Code: 404, Message:Page actionLog Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:54:33] A Error Code: 0, Message:Request Error: Not Find Controller File!data/web/restful/app/controller/ManagerController.php, In Line :155, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 16:58:42] A Error Code: 404, Message:Page actionLog Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 17:02:27] A Error Code: 404, Message:Page actionLog Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 17:10:10] A Error Code: 0, Message:您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录, In Line :93, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-29 17:32:55] A Error Code: 404, Message:404 not found, In Line :79, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 17:34:25] A Error Code: 0, Message:Get Unknown Method pool, In Line :66, At File:/data/web/restful/vendor/yoc/base/AbServer.php
+[2017-09-29 17:34:25] A Error Code: 404, Message:404 not found, In Line :79, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 17:35:13] A Error Code: 404, Message:404 not found, In Line :79, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 18:01:13] A Error Code: 404, Message:404 not found, In Line :79, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 18:02:04] A Error Code: 404, Message:404 not found, In Line :79, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 18:16:50] A Error Code: 0, Message:您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录, In Line :93, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-29 18:16:50] A Error Code: 0, Message:您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录, In Line :93, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-29 18:16:50] A Error Code: 42S22, Message:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'deleted' in 'where clause', In Line :120, At File:/data/web/restful/vendor/yoc/db/Command.php
+[2017-09-29 19:22:09] A Error Code: 0, Message:Request Error: Not Find Controller File!data/web/restful/app/controller/VideoController.php, In Line :155, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 19:23:59] A Error Code: 0, Message:Request Error: Not Find Controller File!data/web/restful/app/controller/VideoController.php, In Line :155, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 19:25:26] A Error Code: 0, Message:您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录, In Line :93, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-29 19:25:26] A Error Code: 0, Message:您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录, In Line :93, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-29 19:25:26] A Error Code: 0, Message:您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录, In Line :93, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-29 20:06:36] A Error Code: 0, Message:Request Error: Not Find Controller File!data/web/restful/app/controller/VideoController.php, In Line :155, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 20:06:40] A Error Code: 404, Message:404 not found, In Line :79, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 20:06:42] A Error Code: 404, Message:404 not found, In Line :79, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 20:10:04] A Error Code: 0, Message:您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录, In Line :93, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-29 20:10:04] A Error Code: 0, Message:您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录, In Line :93, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-29 20:10:04] A Error Code: 0, Message:您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录, In Line :93, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-29 20:10:18] A Error Code: 404, Message:Page actionLog Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 21:44:31] A Error Code: 0, Message:Request Error: Not Find Controller File!data/web/restful/app/controller/Echo.phpController.php, In Line :155, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 22:25:23] A Error Code: 0, Message:您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录, In Line :93, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-29 22:25:23] A Error Code: 0, Message:您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录, In Line :93, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-29 22:25:23] A Error Code: 0, Message:您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录, In Line :93, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-29 22:25:53] A Error Code: 404, Message:Page actionLog Not Find, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-29 23:40:10] A Error Code: 0, Message:您可能还未登录或已超时!!但是您访问的地址被要求登录，请先登录, In Line :93, At File:/data/web/restful/app/components/ActiveController.php

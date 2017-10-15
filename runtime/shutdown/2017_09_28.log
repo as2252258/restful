@@ -1,0 +1,1047 @@
+[2017-09-28 00:19:34] A Error Code: 0, Message:, In Line :, At File:
+[2017-09-28 00:19:38] A Error Code: 0, Message:, In Line :, At File:
+[2017-09-28 00:20:13] A Error Code: 0, Message:, In Line :, At File:
+[2017-09-28 09:31:10] A Error Code: 0, Message:Uncaught TypeError: Argument 2 passed to yoc\Event\Event::on() must be of the type string, object given, called in /data/web/restful/vendor/yoc/base/Objects.php on line 36 and defined in /data/web/restful/vendor/yoc/event/Event.php:32
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Objects.php(36): yoc\Event\Event::on('beforeAction', Object(app\controller\SiteController), Array, Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Controller.php(25): yoc\base\Objects->on('beforeAction', Object(app\controller\SiteController), Array, Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/AbServer.php(19): yoc\base\Controller->init()
+#3 [internal function]: yoc\base\AbServer->__construct(Object(yoc\http\Request))
+#4 /data/web/restful/vendor/yoc/base/Server.php(84): ReflectionClass->newInstanceArgs(Array)
+#5 {main}
+  thrown, In Line :32, At File:/data/web/restful/vendor/yoc/event/Event.php
+[2017-09-28 09:52:58] A Error Code: 0, Message:Uncaught Error: Call to a member function checkSource() on array in /data/web/restful/app/components/ActiveController.php:35
+Stack trace:
+#0 [internal function]: app\components\ActiveController::beforeAction(Array)
+#1 /data/web/restful/vendor/yoc/event/Event.php(106): call_user_func(Array, Array)
+#2 /data/web/restful/vendor/yoc/base/Objects.php(51): yoc\Event\Event::trigger('beforeAction', '', true)
+#3 /data/web/restful/vendor/yoc/base/Server.php(88): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :35, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 09:53:14] A Error Code: 0, Message:Uncaught Error: Call to a member function checkSource() on array in /data/web/restful/app/components/ActiveController.php:35
+Stack trace:
+#0 [internal function]: app\components\ActiveController::beforeAction(Array)
+#1 /data/web/restful/vendor/yoc/event/Event.php(107): call_user_func(Array, Array)
+#2 /data/web/restful/vendor/yoc/base/Objects.php(51): yoc\Event\Event::trigger('beforeAction', '', true)
+#3 /data/web/restful/vendor/yoc/base/Server.php(88): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :35, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 09:56:34] A Error Code: 0, Message:Uncaught Error: Call to a member function checkSource() on array in /data/web/restful/app/components/ActiveController.php:35
+Stack trace:
+#0 [internal function]: app\components\ActiveController->beforeAction(Array)
+#1 /data/web/restful/vendor/yoc/event/Event.php(106): call_user_func(Array, Array)
+#2 /data/web/restful/vendor/yoc/base/Objects.php(51): yoc\Event\Event::trigger('beforeAction', '', true)
+#3 /data/web/restful/vendor/yoc/base/Server.php(88): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :35, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 09:58:37] A Error Code: 0, Message:Uncaught Error: Call to a member function checkSource() on array in /data/web/restful/app/components/ActiveController.php:35
+Stack trace:
+#0 [internal function]: app\components\ActiveController->beforeAction(Array)
+#1 /data/web/restful/vendor/yoc/event/Event.php(105): call_user_func(Array, Array)
+#2 /data/web/restful/vendor/yoc/base/Objects.php(51): yoc\Event\Event::trigger('beforeAction', '', true)
+#3 /data/web/restful/vendor/yoc/base/Server.php(88): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :35, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 09:59:58] A Error Code: 0, Message:Uncaught Error: Call to a member function checkSource() on array in /data/web/restful/app/components/ActiveController.php:38
+Stack trace:
+#0 [internal function]: app\components\ActiveController->beforeAction(Array)
+#1 /data/web/restful/vendor/yoc/event/Event.php(105): call_user_func(Array, Array)
+#2 /data/web/restful/vendor/yoc/base/Objects.php(51): yoc\Event\Event::trigger('beforeAction', '', true)
+#3 /data/web/restful/vendor/yoc/base/Server.php(88): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :38, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 10:00:46] A Error Code: 0, Message:Uncaught Error: Call to a member function checkSource() on array in /data/web/restful/app/components/ActiveController.php:38
+Stack trace:
+#0 [internal function]: app\components\ActiveController->beforeAction(Array)
+#1 /data/web/restful/vendor/yoc/event/Event.php(105): call_user_func(Array, Array)
+#2 /data/web/restful/vendor/yoc/base/Objects.php(51): yoc\Event\Event::trigger('beforeAction', '', true)
+#3 /data/web/restful/vendor/yoc/base/Server.php(88): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :38, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 10:18:23] A Error Code: 0, Message:Uncaught Error: Call to a member function checkSource() on null in /data/web/restful/app/components/ActiveController.php:35
+Stack trace:
+#0 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(NULL)
+#1 [internal function]: app\controller\UserController->beforeAction(NULL)
+#2 /data/web/restful/vendor/yoc/event/Event.php(108): call_user_func(Array, NULL)
+#3 /data/web/restful/vendor/yoc/base/Objects.php(51): yoc\Event\Event::trigger('beforeAction', '', true)
+#4 /data/web/restful/vendor/yoc/base/Server.php(87): yoc\base\Objects->trigger('beforeAction')
+#5 {main}
+  thrown, In Line :35, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 10:25:59] A Error Code: 0, Message:Uncaught Error: Using $this when not in object context in /data/web/restful/app/components/ActiveController.php:39
+Stack trace:
+#0 [internal function]: app\components\ActiveController::beforeAction(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/event/Event.php(108): call_user_func(Array, Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Objects.php(51): yoc\Event\Event::trigger('beforeAction', '', true)
+#3 /data/web/restful/vendor/yoc/base/Server.php(87): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :39, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 13:30:37] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('UserController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:38] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:39] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:39] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:39] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:41] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:41] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:42] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:42] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:42] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:42] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:42] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:42] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:43] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:43] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:43] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:43] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:43] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:43] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:44] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:44] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:44] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:44] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:44] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:30:45] A Error Code: 0, Message:Uncaught TypeError: Argument 1 passed to yoc\base\Controller::__construct() must be of the type array, object given in /data/web/restful/vendor/yoc/base/Controller.php:21
+Stack trace:
+#0 [internal function]: yoc\base\Controller->__construct(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(137): ReflectionClass->newInstanceArgs(Array)
+#2 /data/web/restful/vendor/yoc/base/Server.php(81): yoc\base\Server->createController('SiteController', Object(yoc\http\Request))
+#3 {main}
+  thrown, In Line :21, At File:/data/web/restful/vendor/yoc/base/Controller.php
+[2017-09-28 13:33:32] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:32] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:32] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:32] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:32] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:32] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:34] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:34] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:34] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:34] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:34] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:35] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:35] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:35] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:35] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:35] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:36] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:36] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:36] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:37] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:38] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:38] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:39] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:39] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:39] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:39] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:39] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:39] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:40] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:40] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:40] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:33:40] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(108): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:10] A Error Code: 0, Message:Namespace declaration statement has to be the very first statement or after any declare call in the script, In Line :12, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-28 13:35:20] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:20] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:20] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:20] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:20] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:21] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:21] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:22] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:22] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:23] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:23] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:23] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:23] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:23] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:23] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:24] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:24] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:24] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:24] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:24] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:24] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:24] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:24] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:24] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:25] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:25] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:25] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:25] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:25] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:25] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:25] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:25] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:25] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:25] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:25] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:26] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:26] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:35:59] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:36:00] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:36:00] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:36:00] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 13:36:00] A Error Code: 0, Message:Uncaught Exception: 500 in /data/web/restful/vendor/yoc/base/Objects.php:69
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\base\Objects->trigger('afterAction')
+#1 {main}
+  thrown, In Line :69, At File:/data/web/restful/vendor/yoc/base/Objects.php
+[2017-09-28 15:26:04] A Error Code: 0, Message:Uncaught Error: Call to undefined method Yoc::getLocator() in /data/web/restful/vendor/Yoc.php:62
+Stack trace:
+#0 /data/web/restful/vendor/yoc/http/Response.php(93): Yoc::getError()
+#1 /data/web/restful/vendor/yoc/exception/ErrorHandler.php(185): yoc\http\Response->send(-1, 'Trying to get p...', Array)
+#2 /data/web/restful/vendor/yoc/exception/ErrorHandler.php(133): yoc\exception\ErrorHandler->send(-1, 'Trying to get p...', Array)
+#3 /data/web/restful/app/components/ActiveController.php(56): yoc\exception\ErrorHandler->error_handler(8, 'Trying to get p...', '/data/web/restf...', 56, Array)
+#4 /data/web/restful/app/components/ActiveController.php(39): app\components\ActiveController->getUserModel()
+#5 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#6 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#7 /data/web/restful/vendor/yoc/base/Server.php(84): yoc\base, In Line :62, At File:/data/web/restful/vendor/Yoc.php
+[2017-09-28 15:26:09] A Error Code: 0, Message:Uncaught Error: Call to undefined method Yoc::getLocator() in /data/web/restful/vendor/Yoc.php:62
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(88): Yoc::getError()
+#1 {main}
+  thrown, In Line :62, At File:/data/web/restful/vendor/Yoc.php
+[2017-09-28 15:26:11] A Error Code: 0, Message:Uncaught Error: Call to undefined method Yoc::getLocator() in /data/web/restful/vendor/Yoc.php:62
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(88): Yoc::getError()
+#1 {main}
+  thrown, In Line :62, At File:/data/web/restful/vendor/Yoc.php
+[2017-09-28 15:26:13] A Error Code: 0, Message:Uncaught Error: Call to undefined method Yoc::getLocator() in /data/web/restful/vendor/Yoc.php:62
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(88): Yoc::getError()
+#1 {main}
+  thrown, In Line :62, At File:/data/web/restful/vendor/Yoc.php
+[2017-09-28 15:26:15] A Error Code: 0, Message:Uncaught Error: Call to undefined method Yoc::getLocator() in /data/web/restful/vendor/Yoc.php:62
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(88): Yoc::getError()
+#1 {main}
+  thrown, In Line :62, At File:/data/web/restful/vendor/Yoc.php
+[2017-09-28 15:27:34] A Error Code: 0, Message:Uncaught Error: Call to a member function getHeader() on null in /data/web/restful/app/components/ActiveController.php:56
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(39): app\components\ActiveController->getUserModel()
+#1 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Server.php(84): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :56, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 15:34:50] A Error Code: 0, Message:Uncaught Error: Call to a member function getHeader() on null in /data/web/restful/app/components/ActiveController.php:56
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(39): app\components\ActiveController->getUserModel()
+#1 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Server.php(84): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :56, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 15:34:55] A Error Code: 0, Message:Uncaught Error: Call to a member function getItem() on null in /data/web/restful/vendor/yoc/cache/Redis.php:63
+Stack trace:
+#0 /data/web/restful/vendor/yoc/cache/Redis.php(48): yoc\cache\Redis->getConnects()
+#1 /data/web/restful/vendor/yoc/base/Application.php(94): yoc\cache\Redis->useRedis()
+#2 /data/web/restful/vendor/yoc/base/Components.php(20): yoc\base\Application->getRedis()
+#3 /data/web/restful/vendor/yoc/core/WebSocket.php(137): yoc\base\Components->__get('redis')
+#4 [internal function]: yoc\core\WebSocket::onClose(Object(Swoole\WebSocket\Server), 1, 0)
+#5 /data/web/restful/vendor/yoc/base/Server.php(59): Swoole\Http\Server->start()
+#6 /data/web/restful/vendor/yoc/base/Application.php(118): yoc\base\Server->start()
+#7 /data/web/restful/service.php(86): yoc\base\Application->start()
+#8 /data/web/restful/service.php(90): server_start(Array)
+#9 {main}
+  thrown, In Line :63, At File:/data/web/restful/vendor/yoc/cache/Redis.php
+[2017-09-28 15:35:42] A Error Code: 0, Message:Uncaught Error: Call to a member function getHeader() on null in /data/web/restful/app/components/ActiveController.php:57
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(39): app\components\ActiveController->getUserModel()
+#1 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Server.php(84): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :57, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 15:35:47] A Error Code: 0, Message:Uncaught Error: Call to a member function getItem() on null in /data/web/restful/vendor/yoc/cache/Redis.php:63
+Stack trace:
+#0 /data/web/restful/vendor/yoc/cache/Redis.php(48): yoc\cache\Redis->getConnects()
+#1 /data/web/restful/vendor/yoc/base/Application.php(94): yoc\cache\Redis->useRedis()
+#2 /data/web/restful/vendor/yoc/base/Components.php(20): yoc\base\Application->getRedis()
+#3 /data/web/restful/vendor/yoc/core/WebSocket.php(137): yoc\base\Components->__get('redis')
+#4 [internal function]: yoc\core\WebSocket::onClose(Object(Swoole\WebSocket\Server), 1, 0)
+#5 /data/web/restful/vendor/yoc/base/Server.php(59): Swoole\Http\Server->start()
+#6 /data/web/restful/vendor/yoc/base/Application.php(118): yoc\base\Server->start()
+#7 /data/web/restful/service.php(86): yoc\base\Application->start()
+#8 /data/web/restful/service.php(90): server_start(Array)
+#9 {main}
+  thrown, In Line :63, At File:/data/web/restful/vendor/yoc/cache/Redis.php
+[2017-09-28 15:36:23] A Error Code: 0, Message:Uncaught Error: Call to a member function getHeader() on null in /data/web/restful/app/components/ActiveController.php:56
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(39): app\components\ActiveController->getUserModel()
+#1 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Server.php(87): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :56, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 15:36:28] A Error Code: 0, Message:Uncaught Error: Call to a member function getItem() on null in /data/web/restful/vendor/yoc/cache/Redis.php:63
+Stack trace:
+#0 /data/web/restful/vendor/yoc/cache/Redis.php(48): yoc\cache\Redis->getConnects()
+#1 /data/web/restful/vendor/yoc/base/Application.php(94): yoc\cache\Redis->useRedis()
+#2 /data/web/restful/vendor/yoc/base/Components.php(20): yoc\base\Application->getRedis()
+#3 /data/web/restful/vendor/yoc/core/WebSocket.php(137): yoc\base\Components->__get('redis')
+#4 [internal function]: yoc\core\WebSocket::onClose(Object(Swoole\WebSocket\Server), 1, 0)
+#5 /data/web/restful/vendor/yoc/base/Server.php(59): Swoole\Http\Server->start()
+#6 /data/web/restful/vendor/yoc/base/Application.php(118): yoc\base\Server->start()
+#7 /data/web/restful/service.php(86): yoc\base\Application->start()
+#8 /data/web/restful/service.php(90): server_start(Array)
+#9 {main}
+  thrown, In Line :63, At File:/data/web/restful/vendor/yoc/cache/Redis.php
+[2017-09-28 15:37:15] A Error Code: 0, Message:Uncaught Error: Call to a member function getHeader() on null in /data/web/restful/app/components/ActiveController.php:56
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(39): app\components\ActiveController->getUserModel()
+#1 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Server.php(87): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :56, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 15:37:50] A Error Code: 0, Message:Uncaught Error: Call to a member function getHeader() on null in /data/web/restful/app/components/ActiveController.php:56
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(39): app\components\ActiveController->getUserModel()
+#1 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Server.php(87): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :56, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 15:39:22] A Error Code: 0, Message:Uncaught Error: Call to a member function getHeader() on null in /data/web/restful/app/components/ActiveController.php:56
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(39): app\components\ActiveController->getUserModel()
+#1 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Server.php(87): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :56, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 15:39:54] A Error Code: 0, Message:Uncaught Error: Call to a member function getHeader() on null in /data/web/restful/app/components/ActiveController.php:56
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(39): app\components\ActiveController->getUserModel()
+#1 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Server.php(87): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :56, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 15:40:01] A Error Code: 0, Message:Uncaught Error: Call to a member function getHeader() on null in /data/web/restful/app/components/ActiveController.php:56
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(39): app\components\ActiveController->getUserModel()
+#1 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Server.php(87): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :56, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 15:40:34] A Error Code: 0, Message:Uncaught Error: Call to a member function getHeader() on null in /data/web/restful/app/components/ActiveController.php:56
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(39): app\components\ActiveController->getUserModel()
+#1 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Server.php(85): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :56, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 15:40:51] A Error Code: 0, Message:Uncaught Error: Call to a member function getHeader() on null in /data/web/restful/app/components/ActiveController.php:56
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(39): app\components\ActiveController->getUserModel()
+#1 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Server.php(85): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :56, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 15:41:15] A Error Code: 0, Message:Uncaught Error: Call to a member function getHeader() on null in /data/web/restful/app/components/ActiveController.php:56
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(39): app\components\ActiveController->getUserModel()
+#1 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Server.php(85): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :56, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 15:45:20] A Error Code: 0, Message:Uncaught Error: Call to a member function getUrlPath() on null in /data/web/restful/vendor/yoc/http/Response.php:88
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(98): yoc\http\Response->send(500, 'unknown device ...', Array)
+#1 {main}
+  thrown, In Line :88, At File:/data/web/restful/vendor/yoc/http/Response.php
+[2017-09-28 16:19:36] A Error Code: 0, Message:Uncaught Error: Call to a member function getHeader() on null in /data/web/restful/app/components/ActiveController.php:56
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(39): app\components\ActiveController->getUserModel()
+#1 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Server.php(85): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :56, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 16:20:17] A Error Code: 0, Message:Uncaught Error: Call to a member function getHeader() on null in /data/web/restful/app/components/ActiveController.php:56
+Stack trace:
+#0 /data/web/restful/app/components/ActiveController.php(39): app\components\ActiveController->getUserModel()
+#1 /data/web/restful/app/controller/UserController.php(22): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#2 /data/web/restful/vendor/yoc/base/Objects.php(63): app\controller\UserController->beforeAction(Object(yoc\http\Request))
+#3 /data/web/restful/vendor/yoc/base/Server.php(85): yoc\base\Objects->trigger('beforeAction')
+#4 {main}
+  thrown, In Line :56, At File:/data/web/restful/app/components/ActiveController.php
+[2017-09-28 16:35:07] A Error Code: 0, Message:Uncaught Error: Call to undefined method Yoc::getLocator() in /data/web/restful/vendor/yoc/db/builder/Builder.php:170
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(172): yoc\db\builder\Builder->getPdo()
+#1 /data/web/restful/vendor/yoc/db/ActiveRecord.php(366): yoc\db\builder\QueryRecord->save(Object(app\model\Message), Array)
+#2 /data/web/restful/app/controller/MessageController.php(37): yoc\db\ActiveRecord->save()
+#3 /data/web/restful/vendor/yoc/base/Server.php(85): app\controller\MessageController->actionAdd(Object(yoc\http\Request), Object(yoc\http\Response))
+#4 {main}
+  thrown, In Line :170, At File:/data/web/restful/vendor/yoc/db/builder/Builder.php
+[2017-09-28 16:35:08] A Error Code: 0, Message:Uncaught Error: Call to undefined method Yoc::getLocator() in /data/web/restful/vendor/yoc/db/builder/Builder.php:170
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(172): yoc\db\builder\Builder->getPdo()
+#1 /data/web/restful/vendor/yoc/db/ActiveRecord.php(366): yoc\db\builder\QueryRecord->save(Object(app\model\Message), Array)
+#2 /data/web/restful/app/controller/MessageController.php(37): yoc\db\ActiveRecord->save()
+#3 /data/web/restful/vendor/yoc/base/Server.php(85): app\controller\MessageController->actionAdd(Object(yoc\http\Request), Object(yoc\http\Response))
+#4 {main}
+  thrown, In Line :170, At File:/data/web/restful/vendor/yoc/db/builder/Builder.php
+[2017-09-28 16:35:08] A Error Code: 0, Message:Uncaught Error: Call to undefined method Yoc::getLocator() in /data/web/restful/vendor/yoc/db/builder/Builder.php:170
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(172): yoc\db\builder\Builder->getPdo()
+#1 /data/web/restful/vendor/yoc/db/ActiveRecord.php(366): yoc\db\builder\QueryRecord->save(Object(app\model\Message), Array)
+#2 /data/web/restful/app/controller/MessageController.php(37): yoc\db\ActiveRecord->save()
+#3 /data/web/restful/vendor/yoc/base/Server.php(85): app\controller\MessageController->actionAdd(Object(yoc\http\Request), Object(yoc\http\Response))
+#4 {main}
+  thrown, In Line :170, At File:/data/web/restful/vendor/yoc/db/builder/Builder.php
+[2017-09-28 16:35:08] A Error Code: 0, Message:Uncaught Error: Call to undefined method Yoc::getLocator() in /data/web/restful/vendor/yoc/db/builder/Builder.php:170
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(172): yoc\db\builder\Builder->getPdo()
+#1 /data/web/restful/vendor/yoc/db/ActiveRecord.php(366): yoc\db\builder\QueryRecord->save(Object(app\model\Message), Array)
+#2 /data/web/restful/app/controller/MessageController.php(37): yoc\db\ActiveRecord->save()
+#3 /data/web/restful/vendor/yoc/base/Server.php(85): app\controller\MessageController->actionAdd(Object(yoc\http\Request), Object(yoc\http\Response))
+#4 {main}
+  thrown, In Line :170, At File:/data/web/restful/vendor/yoc/db/builder/Builder.php
+[2017-09-28 16:35:11] A Error Code: 0, Message:Uncaught Error: Call to undefined method Yoc::getLocator() in /data/web/restful/vendor/yoc/db/builder/Builder.php:170
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(172): yoc\db\builder\Builder->getPdo()
+#1 /data/web/restful/vendor/yoc/db/ActiveRecord.php(366): yoc\db\builder\QueryRecord->save(Object(app\model\Message), Array)
+#2 /data/web/restful/app/controller/MessageController.php(37): yoc\db\ActiveRecord->save()
+#3 /data/web/restful/vendor/yoc/base/Server.php(85): app\controller\MessageController->actionAdd(Object(yoc\http\Request), Object(yoc\http\Response))
+#4 {main}
+  thrown, In Line :170, At File:/data/web/restful/vendor/yoc/db/builder/Builder.php
+[2017-09-28 16:35:11] A Error Code: 0, Message:Uncaught Error: Call to undefined method Yoc::getLocator() in /data/web/restful/vendor/yoc/db/builder/Builder.php:170
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(172): yoc\db\builder\Builder->getPdo()
+#1 /data/web/restful/vendor/yoc/db/ActiveRecord.php(366): yoc\db\builder\QueryRecord->save(Object(app\model\Message), Array)
+#2 /data/web/restful/app/controller/MessageController.php(37): yoc\db\ActiveRecord->save()
+#3 /data/web/restful/vendor/yoc/base/Server.php(85): app\controller\MessageController->actionAdd(Object(yoc\http\Request), Object(yoc\http\Response))
+#4 {main}
+  thrown, In Line :170, At File:/data/web/restful/vendor/yoc/db/builder/Builder.php
+[2017-09-28 16:35:12] A Error Code: 0, Message:Uncaught Error: Call to undefined method Yoc::getLocator() in /data/web/restful/vendor/yoc/db/builder/Builder.php:170
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(172): yoc\db\builder\Builder->getPdo()
+#1 /data/web/restful/vendor/yoc/db/ActiveRecord.php(366): yoc\db\builder\QueryRecord->save(Object(app\model\Message), Array)
+#2 /data/web/restful/app/controller/MessageController.php(37): yoc\db\ActiveRecord->save()
+#3 /data/web/restful/vendor/yoc/base/Server.php(85): app\controller\MessageController->actionAdd(Object(yoc\http\Request), Object(yoc\http\Response))
+#4 {main}
+  thrown, In Line :170, At File:/data/web/restful/vendor/yoc/db/builder/Builder.php
+[2017-09-28 16:35:12] A Error Code: 0, Message:Uncaught Error: Call to undefined method Yoc::getLocator() in /data/web/restful/vendor/yoc/db/builder/Builder.php:170
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(172): yoc\db\builder\Builder->getPdo()
+#1 /data/web/restful/vendor/yoc/db/ActiveRecord.php(366): yoc\db\builder\QueryRecord->save(Object(app\model\Message), Array)
+#2 /data/web/restful/app/controller/MessageController.php(37): yoc\db\ActiveRecord->save()
+#3 /data/web/restful/vendor/yoc/base/Server.php(85): app\controller\MessageController->actionAdd(Object(yoc\http\Request), Object(yoc\http\Response))
+#4 {main}
+  thrown, In Line :170, At File:/data/web/restful/vendor/yoc/db/builder/Builder.php
+[2017-09-28 16:35:12] A Error Code: 0, Message:Uncaught Error: Call to undefined method Yoc::getLocator() in /data/web/restful/vendor/yoc/db/builder/Builder.php:170
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(172): yoc\db\builder\Builder->getPdo()
+#1 /data/web/restful/vendor/yoc/db/ActiveRecord.php(366): yoc\db\builder\QueryRecord->save(Object(app\model\Message), Array)
+#2 /data/web/restful/app/controller/MessageController.php(37): yoc\db\ActiveRecord->save()
+#3 /data/web/restful/vendor/yoc/base/Server.php(85): app\controller\MessageController->actionAdd(Object(yoc\http\Request), Object(yoc\http\Response))
+#4 {main}
+  thrown, In Line :170, At File:/data/web/restful/vendor/yoc/db/builder/Builder.php
+[2017-09-28 16:36:55] A Error Code: 0, Message:Uncaught Error: Call to a member function pop() on boolean in /data/web/restful/vendor/yoc/pool/Pool.php:90
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/Connect.php(160): yoc\pool\Pool::getItem('mysql_slaves_po...')
+#1 /data/web/restful/vendor/yoc/db/Connect.php(127): yoc\db\Connect->getConnect(true)
+#2 /data/web/restful/vendor/yoc/db/Connect.php(235): yoc\db\Connect->getSlave()
+#3 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(230): yoc\db\Connect->command(' select id from...', Array)
+#4 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(76): yoc\db\builder\QueryRecord->command(' select id from...', Array)
+#5 /data/web/restful/app/controller/MessageController.php(143): yoc\db\builder\QueryRecord->all()
+#6 /data/web/restful/vendor/yoc/base/Server.php(85): app\controller\MessageController->actionList(Object(yoc\http\Request), Object(yoc\http\Response))
+#7 {main}
+  thrown, In Line :90, At File:/data/web/restful/vendor/yoc/pool/Pool.php
+[2017-09-28 16:36:57] A Error Code: 0, Message:Uncaught Error: Call to a member function pop() on boolean in /data/web/restful/vendor/yoc/pool/Pool.php:90
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/Connect.php(165): yoc\pool\Pool::getItem('mysql_master_po...')
+#1 /data/web/restful/vendor/yoc/db/Connect.php(107): yoc\db\Connect->getConnect()
+#2 /data/web/restful/vendor/yoc/db/Connect.php(247): yoc\db\Connect->getMaster()
+#3 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(161): yoc\db\Connect->getCommand()
+#4 /data/web/restful/vendor/yoc/db/ActiveRecord.php(366): yoc\db\builder\QueryRecord->save(Object(app\model\Message), Array)
+#5 /data/web/restful/app/controller/MessageController.php(37): yoc\db\ActiveRecord->save()
+#6 /data/web/restful/vendor/yoc/base/Server.php(85): app\controller\MessageController->actionAdd(Object(yoc\http\Request), Object(yoc\http\Response))
+#7 {main}
+  thrown, In Line :90, At File:/data/web/restful/vendor/yoc/pool/Pool.php
+[2017-09-28 16:36:58] A Error Code: 0, Message:Uncaught Error: Call to a member function pop() on boolean in /data/web/restful/vendor/yoc/pool/Pool.php:90
+Stack trace:
+#0 /data/web/restful/vendor/yoc/db/Connect.php(165): yoc\pool\Pool::getItem('mysql_master_po...')
+#1 /data/web/restful/vendor/yoc/db/Connect.php(107): yoc\db\Connect->getConnect()
+#2 /data/web/restful/vendor/yoc/db/Connect.php(247): yoc\db\Connect->getMaster()
+#3 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(161): yoc\db\Connect->getCommand()
+#4 /data/web/restful/vendor/yoc/db/ActiveRecord.php(366): yoc\db\builder\QueryRecord->save(Object(app\model\Message), Array)
+#5 /data/web/restful/app/controller/MessageController.php(37): yoc\db\ActiveRecord->save()
+#6 /data/web/restful/vendor/yoc/base/Server.php(85): app\controller\MessageController->actionAdd(Object(yoc\http\Request), Object(yoc\http\Response))
+#7 {main}
+  thrown, In Line :90, At File:/data/web/restful/vendor/yoc/pool/Pool.php
+[2017-09-28 16:37:42] A Error Code: 0, Message:Uncaught Error: __clone method called on non-object in /data/web/restful/vendor/yoc/pool/Pool.php:92
+Stack trace:
+#0 /data/web/restful/vendor/yoc/cache/Redis.php(64): yoc\pool\Pool::getItem('redis_pool_name')
+#1 /data/web/restful/vendor/yoc/cache/Redis.php(49): yoc\cache\Redis->getConnects()
+#2 /data/web/restful/vendor/yoc/base/Application.php(92): yoc\cache\Redis->useRedis()
+#3 /data/web/restful/vendor/yoc/base/Components.php(20): yoc\base\Application->getRedis()
+#4 /data/web/restful/vendor/yoc/core/Authorize.php(149): yoc\base\Components->__get('redis')
+#5 /data/web/restful/vendor/yoc/core/Authorize.php(67): yoc\core\Authorize->getUserModel()
+#6 /data/web/restful/vendor/yoc/core/WebSocket.php(46): yoc\core\Authorize->check(Array, Object(app\model\User))
+#7 {main}
+  thrown, In Line :92, At File:/data/web/restful/vendor/yoc/pool/Pool.php
+[2017-09-28 16:37:46] A Error Code: 0, Message:Uncaught Error: __clone method called on non-object in /data/web/restful/vendor/yoc/pool/Pool.php:92
+Stack trace:
+#0 /data/web/restful/vendor/yoc/cache/Redis.php(64): yoc\pool\Pool::getItem('redis_pool_name')
+#1 /data/web/restful/vendor/yoc/cache/Redis.php(49): yoc\cache\Redis->getConnects()
+#2 /data/web/restful/vendor/yoc/base/Application.php(92): yoc\cache\Redis->useRedis()
+#3 /data/web/restful/vendor/yoc/base/Components.php(20): yoc\base\Application->getRedis()
+#4 /data/web/restful/vendor/yoc/core/WebSocket.php(137): yoc\base\Components->__get('redis')
+#5 [internal function]: yoc\core\WebSocket::onClose(Object(Swoole\WebSocket\Server), 2, -1)
+#6 /data/web/restful/vendor/yoc/http/Response.php(79): Swoole\Http\Response->end('{"code":0,"mess...')
+#7 /data/web/restful/app/controller/UserController.php(105): yoc\http\Response->send(0, Object(app\model\User))
+#8 /data/web/restful/vendor/yoc/base/Server.php(85): app\controller\UserController->actionDetail(Object(yoc\http\Request), Object(yoc\http\Response))
+#9 {m, In Line :92, At File:/data/web/restful/vendor/yoc/pool/Pool.php
+[2017-09-28 16:37:47] A Error Code: 0, Message:Uncaught Error: __clone method called on non-object in /data/web/restful/vendor/yoc/pool/Pool.php:92
+Stack trace:
+#0 /data/web/restful/vendor/yoc/cache/Redis.php(64): yoc\pool\Pool::getItem('redis_pool_name')
+#1 /data/web/restful/vendor/yoc/cache/Redis.php(49): yoc\cache\Redis->getConnects()
+#2 /data/web/restful/vendor/Yoc.php(70): yoc\cache\Redis->useRedis()
+#3 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(113): Yoc::getRedis()
+#4 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(40): yoc\db\builder\QueryRecord->findByPrimary('1')
+#5 /data/web/restful/vendor/yoc/db/ActiveRecord.php(425): yoc\db\builder\QueryRecord->one()
+#6 /data/web/restful/vendor/yoc/core/WebSocket.php(46): yoc\db\ActiveRecord::findOne('1')
+#7 {main}
+  thrown, In Line :92, At File:/data/web/restful/vendor/yoc/pool/Pool.php
+[2017-09-28 16:37:47] A Error Code: 0, Message:Uncaught Error: __clone method called on non-object in /data/web/restful/vendor/yoc/pool/Pool.php:92
+Stack trace:
+#0 /data/web/restful/vendor/yoc/cache/Redis.php(64): yoc\pool\Pool::getItem('redis_pool_name')
+#1 /data/web/restful/vendor/yoc/cache/Redis.php(49): yoc\cache\Redis->getConnects()
+#2 /data/web/restful/vendor/yoc/base/Application.php(92): yoc\cache\Redis->useRedis()
+#3 /data/web/restful/vendor/yoc/base/Components.php(20): yoc\base\Application->getRedis()
+#4 /data/web/restful/vendor/yoc/core/WebSocket.php(137): yoc\base\Components->__get('redis')
+#5 [internal function]: yoc\core\WebSocket::onClose(Object(Swoole\WebSocket\Server), 4, -1)
+#6 /data/web/restful/vendor/yoc/http/Response.php(79): Swoole\Http\Response->end('{"code":0,"mess...')
+#7 /data/web/restful/app/controller/UserController.php(105): yoc\http\Response->send(0, Object(app\model\User))
+#8 /data/web/restful/vendor/yoc/base/Server.php(85): app\controller\UserController->actionDetail(Object(yoc\http\Request), Object(yoc\http\Response))
+#9 {m, In Line :92, At File:/data/web/restful/vendor/yoc/pool/Pool.php
+[2017-09-28 16:37:47] A Error Code: 0, Message:Uncaught Error: __clone method called on non-object in /data/web/restful/vendor/yoc/pool/Pool.php:92
+Stack trace:
+#0 /data/web/restful/vendor/yoc/cache/Redis.php(64): yoc\pool\Pool::getItem('redis_pool_name')
+#1 /data/web/restful/vendor/yoc/cache/Redis.php(49): yoc\cache\Redis->getConnects()
+#2 /data/web/restful/vendor/yoc/base/Application.php(92): yoc\cache\Redis->useRedis()
+#3 /data/web/restful/vendor/yoc/base/Components.php(20): yoc\base\Application->getRedis()
+#4 /data/web/restful/vendor/yoc/core/WebSocket.php(137): yoc\base\Components->__get('redis')
+#5 [internal function]: yoc\core\WebSocket::onClose(Object(Swoole\WebSocket\Server), 5, -1)
+#6 /data/web/restful/vendor/yoc/http/Response.php(79): Swoole\Http\Response->end('{"code":0,"mess...')
+#7 /data/web/restful/app/controller/UserController.php(105): yoc\http\Response->send(0, Object(app\model\User))
+#8 /data/web/restful/vendor/yoc/base/Server.php(85): app\controller\UserController->actionDetail(Object(yoc\http\Request), Object(yoc\http\Response))
+#9 {m, In Line :92, At File:/data/web/restful/vendor/yoc/pool/Pool.php
+[2017-09-28 16:37:47] A Error Code: 0, Message:Uncaught Error: __clone method called on non-object in /data/web/restful/vendor/yoc/pool/Pool.php:92
+Stack trace:
+#0 /data/web/restful/vendor/yoc/cache/Redis.php(64): yoc\pool\Pool::getItem('redis_pool_name')
+#1 /data/web/restful/vendor/yoc/cache/Redis.php(49): yoc\cache\Redis->getConnects()
+#2 /data/web/restful/vendor/Yoc.php(70): yoc\cache\Redis->useRedis()
+#3 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(113): Yoc::getRedis()
+#4 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(86): yoc\db\builder\QueryRecord->findByPrimary('1')
+#5 /data/web/restful/app/controller/FriendGroupController.php(135): yoc\db\builder\QueryRecord->all()
+#6 /data/web/restful/vendor/yoc/base/Server.php(85): app\controller\FriendGroupController->actionList(Object(yoc\http\Request), Object(yoc\http\Response))
+#7 {main}
+  thrown, In Line :92, At File:/data/web/restful/vendor/yoc/pool/Pool.php
+[2017-09-28 16:37:47] A Error Code: 0, Message:Uncaught Error: __clone method called on non-object in /data/web/restful/vendor/yoc/pool/Pool.php:92
+Stack trace:
+#0 /data/web/restful/vendor/yoc/cache/Redis.php(64): yoc\pool\Pool::getItem('redis_pool_name')
+#1 /data/web/restful/vendor/yoc/cache/Redis.php(49): yoc\cache\Redis->getConnects()
+#2 /data/web/restful/vendor/Yoc.php(70): yoc\cache\Redis->useRedis()
+#3 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(113): Yoc::getRedis()
+#4 /data/web/restful/vendor/yoc/db/builder/QueryRecord.php(86): yoc\db\builder\QueryRecord->findByPrimary('2')
+#5 /data/web/restful/app/controller/GroupUserController.php(143): yoc\db\builder\QueryRecord->all()
+#6 /data/web/restful/vendor/yoc/base/Server.php(85): app\controller\GroupUserController->actionList(Object(yoc\http\Request), Object(yoc\http\Response))
+#7 {main}
+  thrown, In Line :92, At File:/data/web/restful/vendor/yoc/pool/Pool.php
+[2017-09-28 18:12:23] A Error Code: 0, Message:Uncaught Error: Call to undefined method stdClass::send() in /data/web/restful/vendor/yoc/base/Server.php:99
+Stack trace:
+#0 {main}
+  thrown, In Line :99, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-28 18:13:08] A Error Code: 0, Message:Uncaught Error: Call to undefined method stdClass::send() in /data/web/restful/vendor/yoc/base/Server.php:99
+Stack trace:
+#0 {main}
+  thrown, In Line :99, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-28 18:14:28] A Error Code: 0, Message:Uncaught Error: Call to undefined method stdClass::send() in /data/web/restful/vendor/yoc/base/Server.php:99
+Stack trace:
+#0 {main}
+  thrown, In Line :99, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-28 18:15:05] A Error Code: 0, Message:Uncaught Error: Call to undefined method stdClass::send() in /data/web/restful/vendor/yoc/base/Server.php:100
+Stack trace:
+#0 {main}
+  thrown, In Line :100, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-28 19:38:52] A Error Code: 0, Message:, In Line :, At File:
+[2017-09-28 19:38:55] A Error Code: 0, Message:Uncaught Error: Cannot use object of type yoc\http\Request as array in /data/web/restful/vendor/yoc/base/Server.php:87
+Stack trace:
+#0 {main}
+  thrown, In Line :87, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-28 19:39:07] A Error Code: 0, Message:, In Line :, At File:
+[2017-09-28 19:39:10] A Error Code: 0, Message:Uncaught Error: Cannot use object of type yoc\http\Request as array in /data/web/restful/vendor/yoc/base/Server.php:87
+Stack trace:
+#0 {main}
+  thrown, In Line :87, At File:/data/web/restful/vendor/yoc/base/Server.php
+[2017-09-28 19:39:46] A Error Code: 0, Message:Uncaught ArgumentCountError: Too few arguments to function app\controller\SiteController::actionLogin(), 1 passed in /data/web/restful/vendor/yoc/base/Server.php on line 111 and exactly 2 expected in /data/web/restful/app/controller/SiteController.php:49
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(111): app\controller\SiteController->actionLogin(Object(yoc\http\Request))
+#1 {main}
+  thrown, In Line :49, At File:/data/web/restful/app/controller/SiteController.php
+[2017-09-28 19:40:11] A Error Code: 0, Message:Uncaught Exception: Get Unknown Method statusCode in /data/web/restful/vendor/yoc/base/AbServer.php:66
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Components.php(24): yoc\base\AbServer->__get('statusCode')
+#1 /data/web/restful/vendor/yoc/base/Server.php(128): yoc\base\Components->__get('statusCode')
+#2 /data/web/restful/vendor/yoc/base/Server.php(120): yoc\base\Server->send(Array)
+#3 {main}
+  thrown, In Line :66, At File:/data/web/restful/vendor/yoc/base/AbServer.php
+[2017-09-28 19:40:48] A Error Code: 0, Message:Uncaught Exception: Get Unknown Method statusCode in /data/web/restful/vendor/yoc/base/AbServer.php:66
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Components.php(24): yoc\base\AbServer->__get('statusCode')
+#1 /data/web/restful/vendor/yoc/base/Server.php(128): yoc\base\Components->__get('statusCode')
+#2 /data/web/restful/vendor/yoc/base/Server.php(120): yoc\base\Server->send(Array)
+#3 {main}
+  thrown, In Line :66, At File:/data/web/restful/vendor/yoc/base/AbServer.php
+[2017-09-28 23:54:33] A Error Code: 0, Message:, In Line :, At File:
+[2017-09-28 23:56:23] A Error Code: 0, Message:Uncaught Error: Call to a member function getHeader() on null in /data/web/restful/vendor/yoc/core/Authorize.php:137
+Stack trace:
+#0 /data/web/restful/vendor/yoc/core/Authorize.php(149): yoc\core\Authorize->authKey()
+#1 /data/web/restful/vendor/yoc/core/Authorize.php(67): yoc\core\Authorize->getUserModel()
+#2 /data/web/restful/vendor/yoc/core/WebSocket.php(46): yoc\core\Authorize->check(Array, Object(app\model\User))
+#3 {main}
+  thrown, In Line :137, At File:/data/web/restful/vendor/yoc/core/Authorize.php

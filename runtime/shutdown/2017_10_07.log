@@ -1,0 +1,21 @@
+[2017-10-07 12:29:23] A Error Code: 0, Message:Uncaught Error: Call to undefined method yoc\base\Controller::beforeAction() in /data/web/restful/app/components/ActiveController.php:35
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Objects.php(63): app\components\ActiveController->beforeAction(Object(yoc\http\Request))
+#1 /data/web/restful/vendor/yoc/base/Server.php(89): yoc\base\Objects->trigger('beforeAction')
+#2 {main}
+  thrown, In Line :35, At File:/data/web/restful/app/components/ActiveController.php
+[2017-10-07 12:29:48] A Error Code: 0, Message:Uncaught Error: Call to undefined function app\controller\redis() in /data/web/restful/app/controller/SiteController.php:164
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(90): app\controller\SiteController->actionEncode(Object(yoc\http\Request))
+#1 {main}
+  thrown, In Line :164, At File:/data/web/restful/app/controller/SiteController.php
+[2017-10-07 12:32:06] A Error Code: 0, Message:Uncaught Error: Call to undefined function app\controller\obs() in /data/web/restful/app/controller/SiteController.php:164
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(91): app\controller\SiteController->actionEncode(Object(yoc\http\Request))
+#1 {main}
+  thrown, In Line :164, At File:/data/web/restful/app/controller/SiteController.php
+[2017-10-07 12:33:06] A Error Code: 0, Message:Uncaught Error: Call to undefined function app\controller\obs() in /data/web/restful/app/controller/SiteController.php:164
+Stack trace:
+#0 /data/web/restful/vendor/yoc/base/Server.php(91): app\controller\SiteController->actionEncode(Object(yoc\http\Request))
+#1 {main}
+  thrown, In Line :164, At File:/data/web/restful/app/controller/SiteController.php
