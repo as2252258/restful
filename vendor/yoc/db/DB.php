@@ -80,7 +80,7 @@ class DB extends Builder
 	public function fetch()
 	{
 		$this->select('*');
-		return Yoc::$app->db->command($this->getSelectSql())->one();
+		return Yoc::$app->db->createCommand($this->getSelectSql())->one();
 	}
 	
 	/**
@@ -118,7 +118,7 @@ class DB extends Builder
 	public function get()
 	{
 		$this->select('*');
-		return Yoc::$app->db->command($this->getSelectSql())->all();
+		return Yoc::$app->db->createCommand($this->getSelectSql())->all();
 	}
 	
 	/**
@@ -130,7 +130,7 @@ class DB extends Builder
 	public function count($key = 'id')
 	{
 		$this->select($key);
-		return Yoc::$app->db->command($this->getSelectSql())->rowCount();
+		return Yoc::$app->db->createCommand($this->getSelectSql())->rowCount();
 	}
 	
 	/**
@@ -146,7 +146,7 @@ class DB extends Builder
 		if (!empty($attribute) && is_array($attribute)) {
 			$this->bindParam($attribute);
 		}
-		return Yoc::$app->db->command($sql , $this->bindParam)->all();
+		return Yoc::$app->db->createCommand($sql , $this->bindParam)->all();
 	}
 	
 	/**
@@ -248,14 +248,14 @@ class DB extends Builder
 	public static function quote($sql , $attributes = [] , $useCache = true)
 	{
 		if ($useCache) {
-			return Yoc::$app->db->command($sql , $attributes)->all();
+			return Yoc::$app->db->createCommand($sql , $attributes)->all();
 		} else {
-			return Yoc::$app->db->command($sql , $attributes)->all();
+			return Yoc::$app->db->createCommand($sql , $attributes)->all();
 		}
 	}
 	
 	public static function find($sql , $attributes = [] , $useCache = true){
-		return Yoc::$app->db->command($sql , $attributes)->one();
+		return Yoc::$app->db->createCommand($sql , $attributes)->one();
 	}
 	
 	/**

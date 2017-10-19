@@ -53,7 +53,6 @@ class Command extends Objects
 	public function setSql($sql)
 	{
 		$this->sql = str_replace('{prefix}', \Yoc::$app->db->prefix, $sql);
-//		echo $this->sql . PHP_EOL;
 		$this->PDOStatement = $this->pdo->prepare($this->sql);
 		if (!empty($this->PDOStatement->errorCode())) {
 			throw new \Exception($this->PDOStatement->errorInfo()[2], $this->PDOStatement->errorCode());

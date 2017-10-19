@@ -2,14 +2,14 @@
 
 namespace app\controller;
 
+use app\components\ActiveController;
 use app\model\Packet;
+use app\model\Purview;
 use Code;
 use Exception;
-use app\model\Purview;
 use yoc\core\Str;
 use yoc\http\Request;
 use yoc\http\Response;
-use app\components\ActiveController;
 
 /**
  * Class PurviewController
@@ -20,10 +20,10 @@ class PurviewController extends ActiveController
 {
 	
 	/**
-	 * @param Request  $request
-	 * @param Response $response
+	 * @param \yoc\http\Request $request
 	 *
-	 * @throws Exception
+	 * @return array
+	 * @throws \Exception
 	 */
 	public function actionAdd(Request $request)
 	{
@@ -39,10 +39,10 @@ class PurviewController extends ActiveController
 	}
 	
 	/**
-	 * @param Request  $request
-	 * @param Response $response
+	 * @param \yoc\http\Request $request
 	 *
-	 * @throws Exception
+	 * @return array
+	 * @throws \Exception
 	 */
 	public function actionUpdate(Request $request)
 	{
@@ -57,7 +57,7 @@ class PurviewController extends ActiveController
 			$primary = $model->id;
 			$array = \Yoc::getRequest()->input->array('auth');
 			if (empty($array)) {
-				return false;
+				throw new Exception('用户组权限不能为空');
 			}
 			Packet::where(['itemId' => $primary])->delete();
 			foreach ($array as $key => $val) {
@@ -68,7 +68,6 @@ class PurviewController extends ActiveController
 				$_packet->modifyTime = date('Y-m-d H:i:s');
 				$_packet->save();
 			}
-			return true;
 		});
 		$results = $model->save();
 		if (!$results) {
@@ -78,10 +77,10 @@ class PurviewController extends ActiveController
 	}
 	
 	/**
-	 * @param Request  $request
-	 * @param Response $response
+	 * @param \yoc\http\Request $request
 	 *
-	 * @throws Exception
+	 * @return array
+	 * @throws \Exception
 	 */
 	public function actionDetail(Request $request)
 	{
@@ -97,10 +96,10 @@ class PurviewController extends ActiveController
 	}
 	
 	/**
-	 * @param Request  $request
-	 * @param Response $response
+	 * @param \yoc\http\Request $request
 	 *
-	 * @throws Exception
+	 * @return array
+	 * @throws \Exception
 	 */
 	public function actionDelete(Request $request)
 	{
@@ -120,10 +119,9 @@ class PurviewController extends ActiveController
 	}
 	
 	/**
-	 * @param Request  $request
-	 * @param Response $response
+	 * @param \yoc\http\Request $request
 	 *
-	 * @throws Exception
+	 * @return array
 	 */
 	public function actionList(Request $request)
 	{

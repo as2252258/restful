@@ -22,6 +22,10 @@ class Request extends Components
 	
 	public $controller;
 	
+	public $isSocket = false;
+	
+	public $isHttp = true;
+	
 	/**
 	 * @var Response
 	 */

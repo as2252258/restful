@@ -10,6 +10,7 @@ namespace app\logic;
 
 use app\model\Group;
 use app\model\GroupMessage;
+use app\model\GroupShield;
 use app\model\GroupUser;
 use app\model\SystemLog;
 use app\model\User;
@@ -109,10 +110,22 @@ class GroupLogic extends Components
 	{
 		$groupAdmin = GroupUser::where(['groupId' => $message->groupId])->all();
 		
-		//加群成功，群管理员通知
+		if ($groupAdmin->isEmpty()) {
+			return;
+		}
+
+//		$shields = GroupShield::where(['groupId' => $groupUser->groupId])->all();
+		
 		foreach ($groupAdmin as $key => $val) {
 			if ($val->isReceiveMessage == 2) continue;
 			if ($val->userId == $message->sendId) continue;
+			
+			$isShield = GroupShield::where(['userId' => $val->userId , 'shieldId' => $message->sendId , 'groupId' => $message->groupId])->one();
+			if (!empty($isShield)) {
+				continue;
+			}
+			
+			/** @var GroupUser $val */
 			\Yoc::pushUser('Group::message' , $val->userId , [
 				'message'  => htmlspecialchars_decode($message->content) ,
 				'avator'   => $user->avator ,
@@ -122,7 +135,6 @@ class GroupLogic extends Components
 				'groupId'  => $val->groupId ,
 			]);
 		}
-		return;
 	}
 	
 	/**
@@ -156,7 +168,7 @@ class GroupLogic extends Components
 		//加群成功，群管理员通知
 		foreach ($groupAdmin as $key => $val) {
 			if ($val->userId == $message->sendId) continue;
-			\Yoc::pushUser('Message::delete' , $val->userId , [
+			\Yoc::pushUser('Message::deleteMessage' , $val->userId , [
 				'type'   => 2 ,
 				'userId' => $message->groupId ,
 				'id'     => $message->id ,
@@ -176,6 +188,8 @@ class GroupLogic extends Components
 			return;
 		}
 		foreach ($groupUser as $key => $val) {
+			/** @var GroupUser $val */
+			$val->delete();
 			$model = new SystemLog();
 			$model->userId = $val->userId;
 			$model->sendId = $user->id;
@@ -188,13 +202,15 @@ class GroupLogic extends Components
 			$model->modifyTime = time();
 			$model->groupId = $group->id;
 			$model->save();
+			
+			
 			\Yoc::pushUser('Group::dissolution' , $model->userId , [
 				'message' => $model->message ,
 				'groupId' => $group->id ,
 				'avatar'  => $group->avatar
 			]);
-			$val->delete();
 		}
+		GroupMessage::where(['groupId' => $group->id])->delete();
 		return;
 	}
 	
@@ -221,10 +237,46 @@ class GroupLogic extends Components
 		};
 		\Yoc::pushUser('Group::transfer' , $groupUser->userId , [
 			'message'       => $log->message ,
-			'groupId' => $groupUser->groupId ,
+			'groupId'       => $groupUser->groupId ,
 			'groupUserInfo' => $groupUser->toArray() ,
 			'sendUserInfo'  => $user->toArray() ,
 			'groupInfo'     => $group->toArray()
 		]);
+	}
+	
+	/**
+	 * @param GroupUser $groupUser
+	 */
+	public function addAdmin($groupUser)
+	{
+		$group = Group::findOne($groupUser->groupId);
+		$users = GroupUser::where(['groupId' => $group->id])->all();
+		if ($users->isEmpty()) {
+			return;
+		}
+		foreach ($users as $key => $val) {
+			$data = array_merge(
+				$groupUser->toArray() , ['group' => $group->toArray()]
+			);
+			\Yoc::pushUser('Group::addAdmin' , $val->userId , $data);
+		}
+	}
+	
+	/**
+	 * @param GroupUser $groupUser
+	 */
+	public function closeAdmin($groupUser)
+	{
+		$group = Group::findOne($groupUser->groupId);
+		$users = GroupUser::where(['groupId' => $group->id])->all();
+		if ($users->isEmpty()) {
+			return;
+		}
+		foreach ($users as $key => $val) {
+			$data = array_merge(
+				$groupUser->toArray() , ['group' => $group->toArray()]
+			);
+			\Yoc::pushUser('Group::closeAdmin' , $val->userId , $data);
+		}
 	}
 }

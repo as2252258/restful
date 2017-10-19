@@ -21,10 +21,10 @@ class MessageController extends ActiveController
 {
 	
 	/**
-	 * @param Request  $request
-	 * @param Response $response
+	 * @param \yoc\http\Request $request
 	 *
-	 * @throws Exception
+	 * @return array
+	 * @throws \Exception
 	 */
 	public function actionAdd(Request $request)
 	{
@@ -34,7 +34,7 @@ class MessageController extends ActiveController
 			'cid'          => $request->input->integer('cid' , false , [0 , 20]) ,             //
 			'userId'       => $request->input->integer('userId' , true , [0 , 20]) ,          //消息接受用户
 			'content'      => $request->input->string('content' , false , null) ,            //消息内容
-			'status'       => $request->input->integer('status' , false , [0 , 1],0) ,           //0.未读  1.已读  2.屏蔽 3.忽略 4.删除
+			'status'       => $request->input->integer('status' , false , [0 , 1] , 0) ,           //0.未读  1.已读  2.屏蔽 3.忽略 4.删除
 			'createTime'   => $request->input->datetime('createTime' , false , date('Y-m-d H:i:s')) ,//消息创建时间
 			'dealwithTime' => $request->input->datetime('dealwithTime' , false , date('Y-m-d H:i:s')) ,//消息处理时间
 		]);
@@ -102,12 +102,12 @@ class MessageController extends ActiveController
 	}
 	
 	/**
-	 * @param Request  $request
-	 * @param Response $response
+	 * @param \yoc\http\Request $request
 	 *
-	 * @throws Exception
+	 * @return array
+	 * @throws \Exception
 	 */
-	public function actionDelete(Request $request)
+	public function actionWithdraw(Request $request)
 	{
 		$_key = $request->input->integer('id' , true);
 		$model = Message::findOne($_key);
@@ -126,10 +126,29 @@ class MessageController extends ActiveController
 	}
 	
 	/**
-	 * @param Request  $request
-	 * @param Response $response
+	 * @param \yoc\http\Request $request
 	 *
-	 * @throws Exception
+	 * @return array
+	 * @throws \Exception
+	 */
+	public function actionDelete(Request $request)
+	{
+		$_key = $request->input->integer('id' , true);
+		$model = Message::findOne($_key);
+		if (empty($model)) {
+			throw new \Exception('数据不存在');
+		}
+		if (!$model->delete()) {
+			return Response::analysis(Code::ERROR , $model->getLastError());
+		}
+		$this->asyncTask(FriendLogic::className() , 'messageDelete' , [$model , $this->user]);
+		return Response::analysis(Code::SUCCESS , 'delete success');
+	}
+	
+	/**
+	 * @param \yoc\http\Request $request
+	 *
+	 * @return array
 	 */
 	public function actionList(Request $request)
 	{
@@ -143,6 +162,12 @@ class MessageController extends ActiveController
 		$pWhere['createTime >='] = $request->input->get('createTime' , false);                  //消息创建时间
 		$pWhere['dealwithTime <='] = $request->input->get('dealwithTime' , false);                //消息处理时间
 		$pWhere['dealwithTime >='] = $request->input->get('dealwithTime' , false);                //消息处理时间
+		
+		if ($request->input->get('id')) {
+			$_cid = [$this->user->id , $request->input->get('id')];
+			arsort($_cid);
+			$pWhere['cid'] = implode('' , $_cid);
+		}
 		
 		//分页处理
 		$count = $request->input->get('count' , false , -1);

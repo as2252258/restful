@@ -39,6 +39,7 @@ use yoc\validate\Validate;
  * @method static QueryRecord alias($value)
  * @method static QueryRecord column($value)
  * @method static QueryRecord clear()
+ * @method static QueryRecord all()
  * @method static QueryRecord whereBetween($key , $value)
  * @method static QueryRecord whereIn($key , $value)
  * @method static QueryRecord whereNotIn(string $key , array $value)
@@ -389,10 +390,7 @@ abstract class ActiveRecord extends Objects implements Databases
 		$validate = [];
 		foreach ($this->rules() as $Key => $val) {
 			$field = array_shift($val);
-			if (empty($val)) {
-				continue;
-			}
-			foreach ($val as $_Key => $_Val) {
+			if (!empty($val)) foreach ($val as $_Key => $_Val) {
 				if (is_string($_Key)) {
 					$validate[] = Validate::createValidate($_Key , $field , $_Val , $this);
 				} else {
@@ -494,10 +492,9 @@ abstract class ActiveRecord extends Objects implements Databases
 	{
 		foreach ($rules as $key => $val) {
 			/** @var Validate $val */
-			if ($val->notify()) {
-				continue;
+			if (!$val->notify()) {
+				throw new \Exception($val->getMessage());
 			}
-			throw new \Exception($val->getMessage());
 		}
 		return true;
 	}

@@ -47,7 +47,7 @@ class Server extends Components
 		}
 		\Yoc::$server->set($this->setting);
 		foreach ($this->callback as $key => $val) {
-			if(!is_object($val)){
+			if (!is_object($val)) {
 				$val = Ioc::createObject($val);
 			}
 			\Yoc::$server->on($key , [$val , 'on' . ucfirst($key)]);
@@ -61,6 +61,7 @@ class Server extends Components
 			$this->process = new \swoole_process($this->process);
 			\Yoc::$server->addProcess($this->process);
 		}
+		file_put_contents(RUNTIME_PATH . '/socket/socket.sock' , '');
 		\Yoc::$server->start();
 	}
 	
@@ -81,6 +82,7 @@ class Server extends Components
 			} else {
 				/** @var Request $_request */
 				$data = $this->run($this->request($request));
+				$this->on('afterAction' , [$this , 'clear'] , \Yoc::$app);
 			}
 		} catch (\Exception $exception) {
 			\Yoc::getError()->setLogger($exception , \Code::ERROR_LEVEL_EXCEPTION);
@@ -95,7 +97,6 @@ class Server extends Components
 		if ($this->response instanceof \swoole_http_response) {
 			$this->send($data , $time);
 		}
-		\Yoc::$app->locator->remove('request' , 'response');
 		$this->trigger('afterAction');
 	}
 	
@@ -117,6 +118,7 @@ class Server extends Components
 			'controller' => empty($explode[0]) ? 'site' : $this->stanceRoute($explode[0]) ,
 			'action'     => empty($explode[1]) ? 'index' : $this->stanceRoute($explode[1]) ,
 		];
+		$this->clear(\Yoc::$app);
 		$this->set('request' , array_merge($_class , [
 			'fd'    => $request->fd ,
 			'input' => [
@@ -150,6 +152,17 @@ class Server extends Components
 			$string = lcfirst($string);
 		}
 		return $string;
+	}
+	
+	/**
+	 * 清理
+	 */
+	public function clear($app)
+	{
+		$app->db->recovery(true);
+		$app->db->recovery(false);
+		$app->locator->remove('request');
+		$app->locator->remove('response');
 	}
 	
 	/**

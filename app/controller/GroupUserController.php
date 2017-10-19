@@ -193,19 +193,22 @@ class GroupUserController extends ActiveController
 	{
 		$remarks = $request->input->string('remarks');
 		
-		$user = GroupUser::whereOr('auth' , [2 , 3])->one();
-		if (empty($user)) {
+		$user = GroupUser::where(['userId' => $this->user->id])->one();
+		if (empty($user) || !in_array($user->auth , [2 , 3])) {
 			return Response::analysis(-1 , '您不是群主或者管理员');
 		}
 		
-		$groupUser = GroupUser::where(['userId' => $request->input->integer('id')])->one();
+		$userId = $request->input->integer('id' , true);
+		$groupId = $request->input->integer('groupId' , true);
+		
+		$groupUser = GroupUser::where(['userId' => $userId , 'groupId' => $groupId])->one();
 		if (empty($groupUser)) {
 			return Response::analysis(-1 , '该用户已不在群里');
 		}
 		$groupUser->delete();
 		
-		$group = Group::findOne($groupUser->groupId);
-		if (empty($_user)) {
+		$group = Group::findOne($groupId);
+		if (empty($group)) {
 			return Response::analysis(-1 , '该群组已被管理员删除');
 		}
 		
@@ -217,24 +220,24 @@ class GroupUserController extends ActiveController
 		$admins = GroupUser::whereOr('auth' , [2 , 3])->all();
 		if (!empty($admins)) foreach ($admins as $key => $val) {
 			$message = '管理员' . $this->user->nickname . '已将成员' . $_user->nickname . '移除' . $group->groupName;
-			$model = Log::recordAndNotify($val->userId , $message , Log::CATE_KICK_GROUP , $remarks , $this->user , $group->id);
+			$model = Log::recordAndNotify($val->userId , $message , Log::CATE_KICK_GROUP , $remarks , $this->user , $groupId);
 			\Yoc::pushUser('Common::loadNews' , $model->userId , [
 				'message'  => $model->message . (empty($model->remarks) ? '' : ', 备注' . $model->remarks) ,
 				'groupId'  => $model->groupId ,
 				'sendId'   => $this->user->id ,
-				'nickname' => $this->user->nickname ,
-				'avator'   => $this->user->avator
+				'nickname' => $group->groupName ,
+				'avatar'   => $group->avatar
 			]);
 		}
 		
 		$message = '您已被管理员移除' . $group->groupName;
-		$model = Log::recordAndNotify($groupUser->userId , $message , Log::CATE_KICK_GROUP , $remarks , $this->user , $group->id);
+		$model = Log::recordAndNotify($groupUser->userId , $message , Log::CATE_KICK_GROUP , $remarks , $this->user , $groupId);
 		\Yoc::pushUser('Group::kick' , $model->userId , [
 			'message'  => $model->message . (empty($model->remarks) ? '' : ', 备注' . $model->remarks) ,
 			'groupId'  => $model->groupId ,
 			'sendId'   => $this->user->id ,
-			'nickname' => $this->user->nickname ,
-			'avator'   => $this->user->avator
+			'nickname' => $group->groupName ,
+			'avatar'   => $group->avatar
 		]);
 		
 		return Response::analysis(0);
@@ -307,6 +310,9 @@ class GroupUserController extends ActiveController
 				return Response::analysis(-1 , $groupUser->getLastError());
 			}
 			$this->asyncTask(GroupLogic::className() , 'join' , [$groupUser , $this->user , $group , $message]);
+			return Response::analysis(0 , array_merge($groupUser->toArray() , [
+				'group' => $group->toArray()
+			]));
 		} else if ($message->status == 2) {
 			$_message = $this->user->nickname . '拒绝了您的邀请';
 			Log::recordAndNotify($message->sendId , $_message , Log::CATE_INVITE , '' , $this->user , $message->groupId);

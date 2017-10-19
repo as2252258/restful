@@ -59,6 +59,9 @@ class UserLogic extends Components
 				return;
 			}
 			$redis = \Yoc::$app->getRedis();
+			if ($redis->exists(FD_LIST . $user->id)) {
+				$this->clearDesktop($redis , $user);
+			}
 			$redis->sAdd(FD_LIST . $user->id , $fd);
 			$redis->set(USER_FD . $fd , $user->id);
 			$user->isOnline = 1;
@@ -80,6 +83,25 @@ class UserLogic extends Components
 			var_dump($exception->getMessage());
 		}
 		return;
+	}
+	
+	
+	/**
+	 * @param \Redis $redis
+	 * @param        $user
+	 */
+	private function clearDesktop($redis , $user)
+	{
+		$list = $redis->sMembers(FD_LIST . $user->id);
+//		if (!empty($list) && is_array($list)) {
+//			foreach ($list as $key => $val) {
+//				\Yoc::$server->push($val , json_encode([
+//					'callback' => 'Common::closeWindows' ,
+//				]));
+//				\Yoc::$server->close($val);
+//			}
+//		}
+//		$redis->del(FD_LIST . $user->id);
 	}
 	
 	/**
@@ -126,7 +148,6 @@ class UserLogic extends Components
 	 */
 	public function message(User $user , Message $message)
 	{
-		var_dump($user,$message);
 		\Yoc::pushUser('Friend::message' , $message->userId , [
 			'message'  => htmlspecialchars_decode($message->content) ,
 			'sendId'   => $message->sendId ,

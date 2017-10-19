@@ -42,7 +42,7 @@ return [
 		'task_max_request'         => 100000 , //设置task进程的最大任务数。
 		'message_queue_key'        => 0x72000120 ,
 		'tcp_fastopen'             => true ,
-		'pid_file'                 => __DIR__ . '/../runtime/server.pid' ,
+//		'pid_file'                 => __DIR__ . '/../runtime/server.pid' ,
 //		'enable_reuse_port'       => true,
 //    'user'            => 'root',
 //    'group'           => 'root',

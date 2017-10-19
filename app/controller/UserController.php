@@ -206,4 +206,13 @@ class UserController extends ActiveController
 		return Response::analysis(Code::SUCCESS , $model->all()->toArray() , $count);
 	}
 	
+	public function actionUserStatus()
+	{
+		return Response::analysis();
+	}
+	
+	public function actionGeneralize(Request $request)
+	{
+	
+	}
 }

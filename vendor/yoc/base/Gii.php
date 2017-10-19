@@ -482,6 +482,11 @@ class ' . $managerName . ' extends ActiveRecord
 			[[\'' . implode('\', \'' , $data) . '\'], \'required\'],';
 	}
 	
+	private function checkIsRequired($val)
+	{
+		return strtolower($val['Null']) == 'no' && $val['Default'] === null ? 'true' : 'false';
+	}
+	
 	public function getLength($val)
 	{
 		$data = [];
@@ -646,11 +651,6 @@ class ' . $managerName . ' extends ActiveRecord
 			if (mb_strlen($val['Field'] . ' >=') > $length) $length = mb_strlen($val['Field'] . ' >=');
 		}
 		return $length;
-	}
-	
-	private function checkIsRequired($val)
-	{
-		return strtolower($val['Null']) == 'no' && $val['Default'] === null ? 'true' : 'false';
 	}
 	
 	public function controllerMethodUpdate($fields , $className , $object = null)

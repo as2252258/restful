@@ -82,6 +82,7 @@ class WebSocket extends Objects
 	{
 		// TODO: Implement onWorkerStart() method.
 		if ($workeer_id < 8) {
+			\Yoc::$app->db->beginConnectPool();
 			$kit = new \Reboot($request->master_pid);
 			$kit->watch(BASE_PATH);
 			$kit->addFileType('.php');
@@ -132,7 +133,6 @@ class WebSocket extends Objects
 			]]);
 		} catch (\Exception $exception) {
 			$endTime = microtime(true);
-			var_dump($exception->getMessage());
 			\Yoc::getError()->setLogger($exception , ERROR_LEVEL_TASK);
 			$message = "info : " . $exception->getMessage() . " on line " . $exception->getLine() . " at file " . $exception->getFile();
 			$finish = json_encode(['taskId' => $task_id , 'status' => 'error' , 'data' => ArrayAccess::toArray($data) , 'info' => $message , 'runTime' => [
@@ -166,11 +166,49 @@ class WebSocket extends Objects
 	{
 		try {
 			$server->push($frame->fd , $frame->fd);
+			$data = json_decode($frame->data , true);
+			if (!is_null($data) && !is_numeric($data)) {
+				if (!isset($data['event'])) {
+					return;
+				}
+				$explode = explode('/' , $data['event']);
+				if (count($explode) != 2) {
+					return;
+				}
+				$action = $this->stanceRoute($explode[1]);
+				$controller = $this->stanceRoute($explode[0]);
+				$create = $this->createController($controller , null);
+				if (!method_exists($create , $action)) {
+					return;
+				}
+				unset($data['event']);
+				$controller->$action();
+			}
 //			\Yoc::pushUser('zb' , 1 , ['blob'=>$frame->data]);
 		} catch (\Exception $e) {
 			\Yoc::getError()->setLogger($e);
 			$server->push($frame->fd , $e->getMessage());
 		}
+	}
+	
+	/**
+	 * @param string $string
+	 *
+	 * @return string
+	 * 路由重建
+	 */
+	private function stanceRoute(string $string)
+	{
+		$string = strtolower($string);
+		if (strpos($string , '-') !== false) {
+			$explode = explode('-' , $string);
+			$string = '';
+			foreach ($explode as $key => $val) {
+				$string .= ucfirst($val);
+			}
+			$string = lcfirst($string);
+		}
+		return $string;
 	}
 	
 	/**
@@ -186,7 +224,8 @@ class WebSocket extends Objects
 	/**
 	 * @param \swoole_process $process
 	 */
-	public function process(\swoole_process $process){
+	public function process(\swoole_process $process)
+	{
 //		swoole_timer_tick()
 	}
 }

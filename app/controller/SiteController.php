@@ -4,6 +4,7 @@ namespace app\controller;
 
 
 use app\components\ActiveController;
+use app\model\Message;
 use app\model\User;
 use Qiniu\Auth;
 use Qiniu\Storage\BucketManager;
@@ -17,17 +18,33 @@ class SiteController extends ActiveController
 {
 	
 	/**
-	 * @param request $request
+	 * @param \yoc\http\request $request
 	 *
+	 * @return array
 	 */
 	public function actionIndex(Request $request)
 	{
 		return Response::analysis(0 , hash('sha384' , '123456'));
 	}
 	
+	public function actionOc()
+	{
+		$model = new Message();
+		$model->cid = 21;
+		$model->userId = 1;
+		$model->sendId = 2;
+		$model->content = Str::rand(256);
+		$model->status = 0;
+		$model->createTime = date('Y-m-d H:i:s');
+		$model->dealwithTime = date('Y-m-d H:i:s');
+		$model->save();
+		return Response::analysis(0);
+	}
+	
 	/**
-	 * @param request $request
+	 * @param \yoc\http\request $request
 	 *
+	 * @return array
 	 * @throws \Exception
 	 */
 	public function actionLogin(Request $request)
@@ -63,11 +80,21 @@ class SiteController extends ActiveController
 		}
 	}
 	
+	/**
+	 * @param \yoc\http\request $request
+	 *
+	 * @return array
+	 */
 	public function actionGii(Request $request)
 	{
 		return Response::analysis(0 , Gii::run($request));
 	}
 	
+	/**
+	 * @param \yoc\http\request $request
+	 *
+	 * @return array
+	 */
 	public function actionClear(Request $request)
 	{
 		$table = $request->input->get('table');
@@ -81,16 +108,31 @@ class SiteController extends ActiveController
 		return Response::analysis(0);
 	}
 	
+	/**
+	 * @param \yoc\http\request $request
+	 *
+	 * @return array
+	 */
 	public function actionPool(Request $request)
 	{
 		return Response::analysis(0 , \Yoc::$app->pool->getAll());
 	}
 	
+	/**
+	 * @param \yoc\http\request $request
+	 *
+	 * @return array
+	 */
 	public function actionAuth(Request $request)
 	{
 		return Response::analysis(0 , Rbac::update());
 	}
 	
+	/**
+	 * @param \yoc\http\request $request
+	 *
+	 * @return array
+	 */
 	public function actionToken(Request $request)
 	{
 		$ak = '-UvQk2r_TzdS9sGOkZZYkSfjZY5prMDK6aGOkYan';
@@ -109,6 +151,11 @@ class SiteController extends ActiveController
 		return Response::analysis($token);
 	}
 	
+	/**
+	 * @param \yoc\http\request $request
+	 *
+	 * @return array
+	 */
 	public function actionLogout(Request $request)
 	{
 		$load = token_temp_key($this->user->id);
@@ -118,6 +165,11 @@ class SiteController extends ActiveController
 		return Response::analysis(0);
 	}
 	
+	/**
+	 * @param \yoc\http\request $request
+	 *
+	 * @return array
+	 */
 	public function actionTaskHistory(Request $request)
 	{
 		$data = $request->input->date('date');
@@ -130,6 +182,11 @@ class SiteController extends ActiveController
 		return Response::analysis(0 , $list);
 	}
 	
+	/**
+	 * @param \yoc\http\request $request
+	 *
+	 * @return array
+	 */
 	public function actionErrorLog(Request $request)
 	{
 		$key = 'error_' . date('Y_m_d');
@@ -143,6 +200,11 @@ class SiteController extends ActiveController
 		return Response::analysis(0 , $data);
 	}
 	
+	/**
+	 * @param \yoc\http\request $request
+	 *
+	 * @return array
+	 */
 	public function actionDeleteIndex(Request $request)
 	{
 		$data = $request->input->date('date');
@@ -155,6 +217,11 @@ class SiteController extends ActiveController
 		return Response::analysis(0 , $list);
 	}
 	
+	/**
+	 * @param \yoc\http\request $request
+	 *
+	 * @return array
+	 */
 	public function actionEncode(Request $request)
 	{
 		return Response::analysis(Str::rand(32));

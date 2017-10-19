@@ -3,8 +3,7 @@
 namespace yoc\base;
 
 
-use yoc\db\ActiveRecord;
-use yoc\db\Collection;
+use yoc\core\ArrayAccess;
 
 class Client extends AbServer
 {
@@ -19,11 +18,11 @@ class Client extends AbServer
 	 *
 	 * @return Client
 	 */
-	public static function send($host, $port, $data, $isException = false)
+	public static function send($host , $port , $data , $isException = false)
 	{
 		static $client = null;
 		if ($client === null) $client = new Client();
-		return $client->push($host, $port, $data, $isException);
+		return $client->push($host , $port , $data , $isException);
 	}
 	
 	/**
@@ -34,10 +33,10 @@ class Client extends AbServer
 	 * @return $this
 	 * @throws \Exception
 	 */
-	private function push($host, $port, $data, $isException)
+	private function push($host , $port , $data , $isException)
 	{
 		$this->client = new \swoole_client(SWOOLE_TCP);
-		if (!$this->client->connect($host, $port)) {
+		if (!$this->client->connect($host , $port)) {
 			throw new \Exception('Host ' . $host . ' Connect Fail!');
 		};
 		$data = $this->toString($data);
@@ -58,36 +57,8 @@ class Client extends AbServer
 		if (!is_object($data) && !is_array($data)) {
 			return $data;
 		}
-		return json_encode($this->toArray($data));
-	}
-	
-	/**
-	 * @param $data
-	 *
-	 * @return array
-	 */
-	private function toArray($data)
-	{
-		if (!is_array($data) || empty($data)) {
-			return [];
-		}
-		$tmp = [];
-		foreach ($data as $key => $val) {
-			if (is_array($val)) {
-				$tmp[$key] = $this->toArray($val);
-			} else if (is_object($val)) {
-				if ($val instanceof Collection) {
-					$tmp[$key] = $val->toArray();
-				} else if ($val instanceof ActiveRecord) {
-					$tmp[$key] = $val->toArray();
-				} else {
-					$tmp[$key] = get_object_vars($val);
-				}
-			} else {
-				$tmp[$key] = $val;
-			}
-		}
-		return $tmp;
+		$data = ArrayAccess::toArray($data);
+		return json_encode($data);
 	}
 	
 	/**

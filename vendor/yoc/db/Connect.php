@@ -10,7 +10,7 @@ namespace yoc\db;
 
 
 use yoc\base\Components;
-use yoc\pool\Connect as ConnectPool;
+use yoc\db\builder\MysqlPool;
 
 class Connect extends Components
 {
@@ -37,7 +37,7 @@ class Connect extends Components
 	/** @var int */
 	public $max = 20;
 	/** @var int */
-	public $initNum = 1;
+	public $initNum = 20;
 	/** @var \PDO $pdo */
 	private $pdo;
 	/** @var \PDO $slavePdo */
@@ -49,15 +49,17 @@ class Connect extends Components
 	 *
 	 * @return $this
 	 */
-	public function recovery($pool = self::SLAVES_POOL_NAME , $null = null)
+	public function recovery($pool = false , $null = null)
 	{
-		$pdo = $pool == self::SLAVES_POOL_NAME ? $this->slavePdo : $this->pdo;
-		if ($pool == self::SLAVES_POOL_NAME) {
-			ConnectPool::push(self::SLAVES_POOL_NAME , $pdo);
+		if ($pool) {
+			$pdo = $this->slavePdo;
 			$this->slavePdo = null;
 		} else {
-			ConnectPool::push(self::MASTER_POOL_NAME , $pdo);
+			$pdo = $this->pdo;
 			$this->pdo = null;
+		}
+		if ($this->checkLink($pdo) && !$pdo->inTransaction()) {
+			MysqlPool::getPool($pool)->recovery($pdo);
 		}
 		return $this;
 	}
@@ -68,7 +70,7 @@ class Connect extends Components
 	 *
 	 * @return Command
 	 */
-	public function command($sql , $params = [])
+	public function createCommand($sql , $params = [])
 	{
 		$command = new Command($this->getSlave() , $sql);
 		if (!empty($params)) {
@@ -86,7 +88,7 @@ class Connect extends Components
 			return $this->getMaster();
 		}
 		if (!$this->checkLink($this->slavePdo)) {
-			$this->slavePdo = $this->getConnect(true);
+			$this->slavePdo = $this->link();
 		}
 		return $this->slavePdo;
 	}
@@ -97,7 +99,7 @@ class Connect extends Components
 	public function getMaster()
 	{
 		if (!$this->checkLink($this->pdo)) {
-			$this->pdo = $this->getConnect();
+			$this->pdo = $this->link(true);
 		}
 		return $this->pdo;
 	}
@@ -112,10 +114,26 @@ class Connect extends Components
 		if (!$link instanceof \PDO) return false;
 		try {
 			$link->getAttribute(\PDO::ATTR_SERVER_INFO);
-		} catch (\Exception $e) {
+		} catch (\PDOException $e) {
+			\Yoc::getError()->addError('mysql' , $e->getMessage());
 			return false;
 		}
 		return true;
+	}
+	
+	/**
+	 * @param bool $isMaster
+	 *
+	 * @return \PDO
+	 * 获取合法连接
+	 */
+	private function link($isMaster = false)
+	{
+		$connect = $this->getConnect($isMaster);
+		if (!$this->checkLink($connect)) {
+			$this->link($isMaster);
+		}
+		return $connect;
 	}
 	
 	/**
@@ -123,18 +141,15 @@ class Connect extends Components
 	 *
 	 * @return \PDO
 	 */
-	private function getConnect($isSlave = false)
+	private function getConnect($isMaster = false)
 	{
-		if ($isSlave) {
-//			$connects = ConnectPool::getItem(self::SLAVES_POOL_NAME);
-//			if (empty($connects)) {
-			$connects = $this->loadSlavesLinks();
-//			}
-		} else {
-//			$connects = ConnectPool::getItem(self::MASTER_POOL_NAME);
-//			if (empty($connects)) {
-			$connects = $this->loadMasterLinks();
-//			}
+		$connects = MysqlPool::getPool($isMaster)->getConnect();
+		if (empty($connects)) {
+			if (!$isMaster && !empty($this->slaveConfigs)) {
+				$connects = $this->loadSlavesLinks();
+			} else {
+				$connects = $this->loadMasterLinks();
+			}
 		}
 		if (is_array($connects)) {
 			return array_shift($connects);
@@ -147,23 +162,22 @@ class Connect extends Components
 	 */
 	private function loadSlavesLinks()
 	{
-		$zPools = [];
 		if (empty($this->slaveConfigs) || !is_array($this->slaveConfigs)) {
-			return $zPools;
+			return [];
 		}
+		$zPools = MysqlPool::getPool(false);
 		$rand = $this->slaveConfigs[array_rand($this->slaveConfigs)];
 		foreach ($this->slaveConfigs as $key => $val) {
 			if (!isset($val[0])) continue;
 			$username = $rand[1] ?? $this->username;
 			$password = $rand[2] ?? $this->password;
-			$zPools[] = $this->connectPdo($rand[0] , $username , $password);
+			for ($i = 0 ; $i < $this->initNum ; $i++) {
+				$zPools->push($this->connectPdo($rand[0] , $username , $password));
+			}
 		}
-//		if (!empty($zPools)) {
-//			ConnectPool::addItem(self::SLAVES_POOL_NAME , $zPools);
-//		}
-		echo '从库连接池初始化成功，初始化数量' . count($zPools);
+		echo '从库连接池初始化成功，初始化数量' . $zPools->getConnectType()->count();
 		echo PHP_EOL;
-		return $zPools;
+		return $zPools->getConnect();
 	}
 	
 	/**
@@ -197,17 +211,44 @@ class Connect extends Components
 	 */
 	private function loadMasterLinks()
 	{
-		$zPools = [];
+		$zPools = MysqlPool::getPool(true);
 		for ($i = 0 ; $i < $this->initNum ; $i++) {
-			$zPools[] = $this->connectPdo();
+			$zPools->push($this->connectPdo());
 		}
-//		$zPools = $this->connectPdo();
-//		if (!empty($zPools)) {
-//			ConnectPool::addItem(self::MASTER_POOL_NAME , $zPools);
-//		}
-		echo '主库连接池初始化成功，初始化数量' . count($zPools);
+		echo '主库连接池初始化成功，初始化数量' . $zPools->getConnectType()->count();
 		echo PHP_EOL;
-		return $zPools;
+		return $zPools->getConnect();
+	}
+	
+	/**
+	 * 初始化连接池
+	 */
+	public function beginConnectPool()
+	{
+		$count = MysqlPool::getPool(true)->getQueue();
+		if (!$count || $count->count() < 1) {
+			$this->loadMasterLinks();
+		}
+		if (!empty($this->slaveConfigs)) {
+			$count = MysqlPool::getPool(false)->getQueue();
+			if (!$count || $count->count() < 1) {
+				$this->loadSlavesLinks();
+			}
+		}
+	}
+	
+	/**
+	 * @return bool
+	 * 判断是否有连接
+	 */
+	public function hasConnect()
+	{
+		$master = $this->getConnect(true);
+		$_slave = $this->getConnect(false);
+		if (!empty($master) || !empty($_slave)) {
+			return true;
+		}
+		return false;
 	}
 	
 	/**

@@ -5,6 +5,7 @@ namespace app\controller;
 use app\components\ActiveController;
 use app\logic\GroupLogic;
 use app\model\Group;
+use app\model\GroupShield;
 use app\model\GroupUser;
 use app\model\MemberDefaultAvatar;
 use Code;
@@ -45,11 +46,13 @@ class GroupController extends ActiveController
 		if (empty($model->avatar)) {
 			$model->avatar = MemberDefaultAvatar::queryRand('avatar');
 		}
+		if (Group::where(['userId' => $this->user->id])->count() > 30) {
+			return Response::analysis(-1 , '您目前最多只能创建30个群');
+		}
 		$results = $model->save();
 		if (!$results) {
 			throw new Exception($model->getLastError());
 		}
-		
 		$user = new GroupUser();
 		$user->userId = $this->user->id;
 		$user->groupId = $model->id;
@@ -63,6 +66,8 @@ class GroupController extends ActiveController
 			$model->delete();
 			return Response::analysis(Code::SYSTEM_ERROR , $user->getLastError());
 		}
+		$user = $user->getAttributes();
+		$user['group'] = $model->toArray();
 		return Response::analysis(Code::SUCCESS , $user);
 	}
 	
@@ -251,5 +256,100 @@ class GroupController extends ActiveController
 			$trance->rollback();
 			return Response::analysis(0 , $exception->getMessage());
 		}
+	}
+	
+	/**
+	 * @param \yoc\http\Request $request
+	 *
+	 * @return array
+	 * 设置管理员
+	 */
+	public function actionAddAdmin(Request $request)
+	{
+		$userId = $request->input->integer('userId' , true);
+		$groupId = $request->input->integer('groupId' , true);
+		
+		$groupUser = GroupUser::where(['userId' => $userId , 'groupId' => $groupId])->one();
+		if (empty($groupUser)) {
+			return Response::analysis(-1 , '该用户非群成员');
+		}
+		
+		$isAdmin = GroupUser::where(['userId' => $this->user->id , 'groupId' => $groupId , 'auth' => 3])->one();
+		if (empty($isAdmin)) {
+			return Response::analysis(-1 , '只有群主能设置管理员');
+		}
+		
+		if ($groupUser->auth != 1) {
+			return Response::analysis(-1 , '该成员已经是群管理员了');
+		}
+		$groupUser->auth = 2;
+		$groupUser->dealwithTime = date('Y-m-d H:i:s');
+		if (!$groupUser->save()) {
+			return Response::analysis(-1 , $groupUser->getLastError());
+		}
+		$this->asyncTask(GroupLogic::className() , 'addAdmin' , [$groupUser]);
+		return Response::analysis(0);
+	}
+	
+	/**
+	 * @param \yoc\http\Request $request
+	 *
+	 * @return array
+	 * 取消管理员
+	 */
+	public function actionCloseAdmin(Request $request)
+	{
+		$userId = $request->input->integer('userId' , true);
+		$groupId = $request->input->integer('groupId' , true);
+		
+		$groupUser = GroupUser::where(['userId' => $userId , 'groupId' => $groupId])->one();
+		if (empty($groupUser)) {
+			return Response::analysis(-1 , '该用户非群成员');
+		}
+		
+		$isAdmin = GroupUser::where(['userId' => $this->user->id , 'groupId' => $groupId , 'auth' => 3])->one();
+		if (empty($isAdmin)) {
+			return Response::analysis(-1 , '只有群主能取消管理员');
+		}
+		
+		if ($groupUser->auth != 2) {
+			return Response::analysis(-1 , '该成员非群管理员');
+		}
+		$groupUser->auth = 1;
+		$groupUser->dealwithTime = date('Y-m-d H:i:s');
+		if (!$groupUser->save()) {
+			return Response::analysis(-1 , $groupUser->getLastError());
+		}
+		$this->asyncTask(GroupLogic::className() , 'closeAdmin' , [$groupUser]);
+		return Response::analysis(0);
+	}
+	
+	/**
+	 * @param \yoc\http\Request $request
+	 *
+	 * @return array
+	 * 群成员屏蔽
+	 */
+	public function actionShield(Request $request)
+	{
+		$userId = $request->input->integer('userId' , true);
+		$groupId = $request->input->integer('groupId' , true);
+		
+		$select = GroupShield::where(['userId' => $this->user->id , 'groupId' => $groupId , 'shieldId' => $userId])->one();
+		if (empty($select)) {
+			return Response::analysis(-1 , '该用户已被您屏蔽');
+		}
+		$select = GroupUser::where(['userId' => $userId , 'groupId' => $groupId])->one();
+		if (empty($select)) {
+			return Response::analysis(-1 , '群成员不存在');
+		}
+		$select = new GroupShield();
+		$select->userId = $this->user->id;
+		$select->groupId = $groupId;
+		$select->shieldId = $userId;
+		if (!$select->save()) {
+			return Response::analysis(-1 , $select->getLastError());
+		}
+		return Response::analysis(0);
 	}
 }

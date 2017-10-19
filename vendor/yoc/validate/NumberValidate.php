@@ -34,7 +34,7 @@ class NumberValidate extends Validate
 		if (!isset($this->param[$fields])) {
 			return $this->isFail = true;
 		}
-		if (!is_numeric($this->param[$fields])) {
+		if (intval($this->param[$fields]) != $this->param[$fields]) {
 			return $this->isFail = false;
 		}
 		return $this->isFail = true;

@@ -147,7 +147,7 @@ class Response extends Components
 		$args = func_get_args();
 		$data = ['code' => -100 , 'message' => '' , 'total' => 0 , 'exPageInfo' => [] , 'results' => '' , 'trance' => []];
 		foreach ($args as $key => $val) {
-			if (is_integer($val)) {
+			if (is_numeric($val)) {
 				if ($data['code'] < -1) {
 					$data['code'] = $val;
 				} else {
@@ -183,6 +183,7 @@ class Response extends Components
 			}
 		}
 		if ($data['code'] == -100) $data['code'] = 0;
+		$data['trance'] = \DB::getSqlTrance();
 		return json_encode($data , JSON_UNESCAPED_UNICODE);
 	}
 	

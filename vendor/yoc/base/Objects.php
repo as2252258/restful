@@ -80,9 +80,9 @@ class Objects extends AbServer
 		if (!method_exists($controller , $action)) {
 			throw new \Exception('Page ' . $action . ' Not Find' , 404);
 		}
-		$this->on('beforeAction' , [$controller , 'beforeAction'] , [$request]);
+		$this->on('beforeAction' , [$controller , 'beforeAction'] , $request);
 		if (method_exists($controller , 'afterAction')) {
-			$this->on('afterAction' , [$controller , 'afterAction'] , [$request]);
+			$this->on('afterAction' , [$controller , 'afterAction'] , $request);
 		}
 		$this->trigger('beforeAction');
 		return $controller->{$action}($request);
@@ -152,11 +152,11 @@ class Objects extends AbServer
 			$events = $this->_events[$event];
 			unset($this->_events[$event]);
 			foreach ($events as $key => $val) {
-				$callback = $val[0];
-				if (is_array($callback) && isset($callback[1]) && isset($callback[1])) {
-					$callback[0]->{$callback[1]}(...$val[1]);
+				$callback = array_shift($val);
+				if (is_array($callback) && isset($callback[1])) {
+					$callback[0]->{$callback[1]}($val[0]);
 				} else if (is_callable($callback , true)) {
-					call_user_func($callback , ...$val[1]);
+					call_user_func($callback , $val[0]);
 				}
 				unset($this->_events[$key]);
 			}

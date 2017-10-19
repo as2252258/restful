@@ -19,10 +19,30 @@ use yoc\base\Components;
 class FriendLogic extends Components
 {
 	
+	/**
+	 * @param \app\model\Message $message
+	 * @param \app\model\User    $user
+	 * 消息回撤
+	 */
 	public function messageRollback(Message $message , User $user)
 	{
 		$userId = $message->sendId == $user->id ? $message->userId : $message->sendId;
 		\Yoc::pushUser('Message::rollback' , $userId , [
+			'type'   => 1 ,
+			'userId' => $userId == $message->userId ? $message->sendId : $message->userId,
+			'id'     => $message->id ,
+		]);
+	}
+	
+	/**
+	 * @param \app\model\Message $message
+	 * @param \app\model\User    $user
+	 * 消息删除
+	 */
+	public function messageDelete(Message $message , User $user)
+	{
+		$userId = $message->sendId == $user->id ? $message->userId : $message->sendId;
+		\Yoc::pushUser('Message::deleteMessage' , $userId , [
 			'type'   => 1 ,
 			'userId' => $userId == $message->userId ? $message->sendId : $message->userId,
 			'id'     => $message->id ,

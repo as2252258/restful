@@ -32,7 +32,7 @@ class Authorize extends Components
 	}
 	
 	/**
-	 * @param User $user
+	 * @param $user
 	 *
 	 * @return array
 	 * @throws \Exception

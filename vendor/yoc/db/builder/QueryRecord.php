@@ -174,7 +174,7 @@ class QueryRecord extends Builder
 	 */
 	private function command($sql , $attribute = [])
 	{
-		return $this->getPdo()->command($sql , $attribute);
+		return $this->getPdo()->createCommand($sql , $attribute);
 	}
 	
 	/**
@@ -226,8 +226,8 @@ class QueryRecord extends Builder
 	}
 	
 	/**
-	 * @return int
-	 */
+		* @return int
+		*/
 	public function count()
 	{
 		list($count , $sql) = $this->byCache($this->getCountSql(false) , 'count');
@@ -259,9 +259,7 @@ class QueryRecord extends Builder
 		if ($this->hasEventHandlers($model::EVENT_SAVE_BEFORE , $model)) {
 			$this->trigger($model::EVENT_SAVE_BEFORE , $this);
 		}
-		if ($this->hasEventHandlers('SAVE_RULE' , $model)) {
-			$this->trigger('SAVE_RULE' , $this);
-		}
+		$model->trigger('SAVE_RULE');
 		if ($model->isNewRecord) {
 			$sql = $this->getInsertSql($model->getAttributes());
 			$execute = $command->setSql($sql)->insert($model->getAttributes());
@@ -287,7 +285,7 @@ class QueryRecord extends Builder
 		ModelPool::removeByPatten($this->getTableName());
 		\Yoc::getRedis()->hMset($model->cache_key() , $model->getAttributes());
 		$this->byCache($sql , 'fetch,fetchAll' , 'clear');
-		return $this->builder($model);
+		return $model;
 	}
 	
 	/**

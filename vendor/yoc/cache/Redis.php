@@ -10,35 +10,36 @@ namespace yoc\cache;
 
 use yoc\base\Components;
 use yoc\db\ActiveRecord;
-use yoc\pool\Connect;
-use yoc\pool\Pool;
+
+//use yoc\pool\Connect;
 
 class Redis extends Components
 {
 	
+	const REDIS_POOL_NAME = 'redis_pool_name';
 	public $host;
-	
 	public $auth;
-	
 	public $database;
-	
 	public $port;
-	
 	private $redis;
 	
-	const REDIS_POOL_NAME = 'redis_pool_name';
-	
 	/**
-	 * @throws \Exception
+	 * @param $patten
+	 *
+	 * @return bool
 	 */
-	public function connect()
+	public function clear($patten)
 	{
-		$link = new \Redis();
-		if (!$link->connect($this->host, $this->port)) {
-			throw new \Exception('Redis Connect Failed!');
+		if (empty($patten)) return false;
+		$start = 0;
+		$redis = $this->useRedis();
+		while (($scan = $redis->scan($start , $patten)) != 0) {
+			$start = 0;
+			foreach ($scan as $key => $val) {
+				$redis->delete($val);
+			}
 		}
-		$link->auth($this->auth);
-		return $link;
+		return true;
 	}
 	
 	/**
@@ -48,7 +49,7 @@ class Redis extends Components
 	{
 		$connects = $this->getConnects();
 		$redis = array_shift($connects);
-		Connect::update(self::REDIS_POOL_NAME, $connects);
+//		Connect::update(self::REDIS_POOL_NAME, $connects);
 		if (empty($redis) || !$redis->ping()) {
 			$redis = $this->useRedis();
 		}
@@ -61,36 +62,29 @@ class Redis extends Components
 	 */
 	private function getConnects()
 	{
-		$lists = Connect::getItem(self::REDIS_POOL_NAME);
+		$lists = null;
 		if (empty($lists)) {
 			$lists = [];
-			for ($i = 0; $i < 20; $i++) {
+			for ($i = 0 ; $i < 1 ; $i++) {
 				$lists[] = $this->connect();
 			}
 			if (!empty($lists)) {
-				Connect::addItem(self::REDIS_POOL_NAME, $lists);
 			}
 		}
 		return $lists;
 	}
 	
 	/**
-	 * @param $patten
-	 *
-	 * @return bool
+	 * @throws \Exception
 	 */
-	public function clear($patten)
+	public function connect()
 	{
-		if (empty($patten)) return false;
-		$start = 0;
-		$redis = $this->useRedis();
-		while (($scan = $redis->scan($start, $patten)) != 0) {
-			$start = 0;
-			foreach ($scan as $key => $val) {
-				$redis->delete($val);
-			}
+		$link = new \Redis();
+		if (!$link->connect($this->host , $this->port)) {
+			throw new \Exception('Redis Connect Failed!');
 		}
-		return true;
+		$link->auth($this->auth);
+		return $link;
 	}
 	
 	/**
@@ -107,7 +101,7 @@ class Redis extends Components
 	 *
 	 * @return $this|bool
 	 */
-	public function hMSet($key, $map)
+	public function hMSet($key , $map)
 	{
 		if (is_object($map)) {
 			if ($map instanceof ActiveRecord) {
@@ -128,9 +122,9 @@ class Redis extends Components
 		}
 		$data = $this->useRedis()->hGetAll($key);
 		if (!empty($data)) {
-			$map = array_merge($data, $map);
+			$map = array_merge($data , $map);
 		}
-		return $this->useRedis()->hMset($key, $map);
+		return $this->useRedis()->hMset($key , $map);
 	}
 	
 	/**
@@ -148,7 +142,7 @@ class Redis extends Components
 			return null;
 		}
 		foreach ($data as $key => $val) {
-			$_val = !is_null(json_decode($val)) ? json_decode($val, true) : $val;
+			$_val = !is_null(json_decode($val)) ? json_decode($val , true) : $val;
 			$data[$key] = $_val;
 		}
 		return $data;
