@@ -1,4 +1,5 @@
 .idea
 config/web.php
+app/model/*.php
 composer.phar
 runtime
